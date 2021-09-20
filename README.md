@@ -8,5 +8,6 @@
 cd diretorio_jornalistas/backend/api
 source venv/bin/activate
 pip install -r requirements.txt
+python manage.py runserver
 
 ```
