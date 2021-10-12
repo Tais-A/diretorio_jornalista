@@ -16,11 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
+from django.conf.urls.static import static
+from django.conf import settings
+from django.conf.urls import url, include
+
+from controleDeAcesso.urls import HomeUrls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('controleDeAcesso', include('controleDeAcesso.urls')),
+    path('',include('controleDeAcesso.urls.HomeUrls')), #home(contorole de acesso?)
+    path('controleDeAcesso/', include('controleDeAcesso.urls')),
     path('curriculo/', include('curriculo.urls')),
     path('deontologia/', include('deontologia.urls')),
     path('publicacao/', include('publicacao.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

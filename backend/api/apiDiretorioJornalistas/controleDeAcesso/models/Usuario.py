@@ -1,24 +1,12 @@
-from django.db import models
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
-from django.dispatch import receiver
+from controleDeAcesso.models import *
 
-# Create your models here.
-
-ROLE_CHOICE = {
-    (1, 'Admin'),
-    (2, 'Revisor'),
-    (3, 'Jornalista'),
-    (4, 'Usuario')
-}
 class Usuario(models.Model):
     nome = models.CharField(primary_key=True, max_length=65)
     data_nascimento = models.DateField()
     raça_etnia = models.CharField(max_length=45, blank=True, null=True)
     genero = models.CharField(max_length=30, blank=True, null=True)
     estado_civil = models.CharField(max_length=15, blank=True, null=True)
-    cidade = models.CharField(max_length=30, blank=True, null=True)
-    estado = models.CharField(max_length=15, blank=True, null=True)
+    cidade = models.ForeignKey(City, null=True, related_name='city', on_delete=models.SET_NULL)
     funcao = models.IntegerField(choices=ROLE_CHOICE, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
