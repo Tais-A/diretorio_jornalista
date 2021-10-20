@@ -154,4 +154,16 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+*.dbeaver/*
 
+## Misc
+
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings
+local.properties
+.loadpath

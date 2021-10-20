@@ -9,7 +9,6 @@ from django.db import models
 
 
 class AdminGeral(models.Model):
-    idaminis_geral = models.IntegerField(primary_key=True)
     nome_adm = models.CharField(max_length=65, blank=True, null=True)
     funcao = models.CharField(max_length=30, blank=True, null=True)
 
