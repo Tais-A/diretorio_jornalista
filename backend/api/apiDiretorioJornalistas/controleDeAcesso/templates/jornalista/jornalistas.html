@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Jornalistas{% endblock %}
+{% block content %}
+<div id="content">
+    <div class="container">
+        <div class="alert alert-info">Foram encontrados: {{ jornalistas | length }} jornalista(s)</div>
+
+        <!-- mostra a mensagem de alerta-->
+        {% if request.GET.msg %}
+        <div class="alert alert-{{request.GET.type}}">{{request.GET.msg}}</div>
+        {% endif%}
+
+        <div class="row">
+            {% for jornalista in jornalistas %}
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <div class="card mb-4">
+                    <div class="image-circle" style="background-image: url('/media/{{jornalista.imagem}}');"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{jornalista.user.get_full_name}}</h5>
+                        <h6>Nota: {{jornalista.show_scoring_average}} <i class="fa fa-star"></i></h6>
+                        
+                        <a href={% url 'usuario' jornalista.user.id %} class="btn btn-primary btn-card">Ver jornalista</a>
+                        {% if user.is_authenticated %}
+                            <!-- <form method="POST" action="/medic/favorite"> -->
+                            {% csrf_token %}
+                            <input type="hidden" value="{{jornalista.user.id}}" name="id">
+                            <input type="hidden" value="{{request.GET.page}}" name="page">
+                            <input type="hidden" value="{{request.GET.name}}" name="name">
+                            <input type="hidden" value="{{request.GET.city}}" name="city">
+                            <input type="hidden" value="{{request.GET.state}}" name="state">
+                            <!-- </form> -->
+                        {% endif %} 
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <nav aria-label="Page navigation" class="navigation">
+                <ul class="pagination">
+                    {% if jornalistas.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page=1{{ parameters }}">&laquo; Primeiro</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ jornalistas.previous_page_number }}{{ parameters }}">Anterior</a></li>
+                    {% endif %}
+                    <li class="page-item"><a class="page-link" href="#">Página {{ jornalistas.number }} de {{ jornalistas.paginator.num_pages }}.</a></li>
+                    {% if jornalistas.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ jornalistas.next_page_number }}{{ parameters }}">Próximo</a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ jornalistas.paginator.num_pages }}{{ parameters }}">Úlitmo &raquo;</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+{% endblock %}

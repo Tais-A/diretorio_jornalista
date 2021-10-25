@@ -12,4 +12,5 @@ ROLE_CHOICE = {
 
 from .State import State
 from .City import City
+from .Rating import Rating
 from .Usuario import Usuario

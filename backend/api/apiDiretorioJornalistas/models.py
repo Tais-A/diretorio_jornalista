@@ -150,15 +150,6 @@ class ExperienciaProfissional(models.Model):
         db_table = 'experiencia_profissional'
 
 
-class Formacao(models.Model):
-    tema = models.CharField(primary_key=True, max_length=65)
-    instituicao = models.CharField(max_length=65)
-    ano_conclusao = models.DateField()
-    nivel_graduacao = models.CharField(max_length=15, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'formacao'
 
 
 class LocaisDeTrabalho(models.Model):
@@ -190,17 +181,3 @@ class Questionamento(models.Model):
         managed = False
         db_table = 'questionamento'
 
-
-class Usuario(models.Model):
-    nome = models.CharField(primary_key=True, max_length=65)
-    data_nascimento = models.DateField()
-    raça_etnia = models.CharField(max_length=45)
-    genero = models.CharField(max_length=30, blank=True, null=True)
-    estado_civil = models.CharField(max_length=15, blank=True, null=True)
-    cidade = models.CharField(max_length=30, blank=True, null=True)
-    estado = models.CharField(max_length=15, blank=True, null=True)
-    funcao = models.CharField(max_length=30, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'usuario'

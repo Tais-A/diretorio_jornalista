@@ -25,9 +25,11 @@ from controleDeAcesso.urls import HomeUrls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('controleDeAcesso.urls.HomeUrls')), #home(contorole de acesso?)
-    path('controleDeAcesso/', include('controleDeAcesso.urls')),
+
+    path('jornalista/', include('controleDeAcesso.urls.JornalistaUrls')),
+    path('usuario/', include('controleDeAcesso.urls.UsuarioUrls')),
+
     path('curriculo/', include('curriculo.urls')),
     path('deontologia/', include('deontologia.urls')),
     path('publicacao/', include('publicacao.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
