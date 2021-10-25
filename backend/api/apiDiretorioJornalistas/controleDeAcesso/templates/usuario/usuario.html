@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Usuarios{% endblock %}
+{% block styles %}<link rel="stylesheet" href="{% static 'css/profile.css' %}">{% endblock %}
+{% block content %}
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-3" id="profile-area">
+                <div id="image-profile" style="background-image: url('/media/{{usuario.imagem}}');"></div>
+
+                {% if usuario.funcao == 1 %}
+                <p class="badge badge-primary text-center" id="badge-role"><i class="fa fa-building"></i>Administrador</p>
+                {% elif usuario.funcao == 2 %} 
+                <p class="badge badge-primary text-center" id="badge-role"><i class="fa fa-user-md"></i>Revisor</p>
+                {% elif usuario.funcao == 3 %} 
+                <p class="badge badge-primary text-center" id="badge-role"><i class="fa fa-user-md"></i>Jornalista</p>             
+                {% else %}
+                <p class="badge badge-primary text-center" id="badge-role"><i class="fa fa-user"></i>Usuário</p>
+                {% endif %}
+
+                {% if usuario.user.id == request.user.id %}
+                <a id="icon-edit" href="#"><i class="fa fa-edit"></i></a>
+                {% endif %}
+                
+                <ul class="list-group">
+                    <li class="list-group-item">Nome: {{usuario.user.get_full_name | default:"Sem nome"}}</li>
+                    <li class="list-group-item">Usuário: {{usuario.user.username | default:"Sem usuário"}}</li>
+                    <li class="list-group-item">E-mail: {{usuario.user.email | default:"Sem e-mail"}}</li>
+                    <li class="list-group-item">Nascimento: {{usuario.data_nascimento | date:'d/m/Y' | default:"Sem data"}}</li>
+                    {% if profile.role == 3 %}
+                        <li class="list-group-item">Nota: {{usuario.show_scoring_average }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+                <div class="col-xs-12 col-md-3" id="addresses-area"></div>
+                <div class="col-xs-12 col-md-6" id="ratings-area"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
