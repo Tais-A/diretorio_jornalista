@@ -25,7 +25,7 @@ from controleDeAcesso.urls import HomeUrls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('controleDeAcesso.urls.HomeUrls')), #home(contorole de acesso?)
-
+    path('', include('controleDeAcesso.urls.AuthUrls')),
     path('jornalista/', include('controleDeAcesso.urls.JornalistaUrls')),
     path('usuario/', include('controleDeAcesso.urls.UsuarioUrls')),
 

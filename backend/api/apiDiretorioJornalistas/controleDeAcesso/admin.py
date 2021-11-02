@@ -7,8 +7,8 @@ class UsuarioAdmin(admin.ModelAdmin):
     list_display = ('user', 'cidade', 'funcao','created_at')
 
 admin.site.register(Usuario, UsuarioAdmin)
-admin.site.register(State)
-admin.site.register(City)
-admin.site.register(Rating)
+admin.site.register(Estado)
+admin.site.register(Cidade)
+admin.site.register(Confiabilidade)
 
 

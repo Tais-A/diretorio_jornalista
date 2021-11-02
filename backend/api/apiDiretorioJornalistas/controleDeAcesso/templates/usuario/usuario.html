@@ -28,9 +28,9 @@
                     <li class="list-group-item">Usuário: {{usuario.user.username | default:"Sem usuário"}}</li>
                     <li class="list-group-item">E-mail: {{usuario.user.email | default:"Sem e-mail"}}</li>
                     <li class="list-group-item">Nascimento: {{usuario.data_nascimento | date:'d/m/Y' | default:"Sem data"}}</li>
-                    {% if profile.role == 3 %}
+                    <!-- {% if usuario.funcao == 3 %}
                         <li class="list-group-item">Nota: {{usuario.show_scoring_average }}</li>
-                    {% endif %}
+                    {% endif %} -->
                 </ul>
             </div>
                 <div class="col-xs-12 col-md-3" id="addresses-area"></div>

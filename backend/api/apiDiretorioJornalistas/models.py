@@ -140,29 +140,11 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
-class ExperienciaProfissional(models.Model):
-    locais_de_trabalho = models.CharField(primary_key=True, max_length=500)
-    titulos = models.CharField(max_length=100, blank=True, null=True)
-    outros_aspectos_profissionais = models.CharField(max_length=100, blank=True, null=True)
+
 
     class Meta:
         managed = False
         db_table = 'experiencia_profissional'
-
-
-
-
-class LocaisDeTrabalho(models.Model):
-    nome_profisinal = models.CharField(primary_key=True, max_length=65)
-    foto = models.TextField(blank=True, null=True)  # This field type is a guess.
-    registro_profissional = models.CharField(max_length=65, blank=True, null=True)
-    empresa_instituicao = models.CharField(max_length=65, blank=True, null=True)
-    contato_do_jornalista = models.CharField(max_length=65)
-
-    class Meta:
-        managed = False
-        db_table = 'locais_de_trabalho'
-
 
 class Manifestacao(models.Model):
     idmanifestacao = models.IntegerField(primary_key=True)

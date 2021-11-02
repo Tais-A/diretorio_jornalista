@@ -11,6 +11,7 @@
 				"host": "172.20.0.3",
 				"port": "5432",
 				"url": "jdbc:postgresql://172.20.0.3:5432/",
+				"home": "/usr/bin",
 				"type": "dev",
 				"provider-properties": {
 					"@dbeaver-show-non-default-db@": "true",
@@ -21,8 +22,7 @@
 					"postgresql.dd.plain.string": "false",
 					"postgresql.dd.tag.string": "false"
 				},
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
 			}
 		}
 	},
