@@ -9,8 +9,8 @@ class UsuarioForm(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(UsuarioForm, self).__init__(*args, **kwargs)
-        if self.instance and self.instance.funcao != 1:
-            del self.fields['funcao']
+        # if self.instance and self.instance.funcao != 1:
+        #     del self.fields['funcao']
     
     class Meta:
         model = Usuario

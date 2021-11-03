@@ -24,12 +24,13 @@ from controleDeAcesso.urls import HomeUrls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('controleDeAcesso.urls.HomeUrls')), #home(contorole de acesso?)
+    path('',include('controleDeAcesso.urls.HomeUrls')), 
     path('', include('controleDeAcesso.urls.AuthUrls')),
     path('jornalista/', include('controleDeAcesso.urls.JornalistaUrls')),
     path('usuario/', include('controleDeAcesso.urls.UsuarioUrls')),
 
     path('curriculo/', include('curriculo.urls')),
     path('deontologia/', include('deontologia.urls')),
-    path('publicacao/', include('publicacao.urls'))
+
+    path('publicacao/', include('publicacao.urls.PublicacaoUrls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

@@ -1,6 +1,6 @@
 from django.http import request
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.models import User
 from controleDeAcesso.forms.AuthForm import LoginForm, RegisterForm
 from django.conf import settings
@@ -78,3 +78,7 @@ def register_view(request):
     }
 
     return render(request, template_name='auth/auth.html', context=context, status=200)
+
+def logout_view(request):
+    logout(request)
+    return redirect('/login')
