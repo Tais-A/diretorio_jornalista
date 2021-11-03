@@ -1,0 +1,1 @@
+from .PublicacaoView import *
