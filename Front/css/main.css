@@ -1,0 +1,184 @@
+body {
+  width: 100%;
+  height: 100%;
+
+}
+
+.parte_decima {
+  /*Menu principal */
+  width: 100%;
+  background-color: #f7f7f7;
+  height: 82px;
+}
+
+main {
+  margin: 0 auto;
+  width: 1440px;
+  position: relative;
+}
+
+.logo {
+  float: left;
+  padding: 16px;
+  width: 72%;
+  /*Coloca um pouco mais no meio*/
+}
+
+
+.Menu-de-cima ul li {
+  left: 888px;
+  width:40px;
+  height: 22px;
+  padding: 20px;
+  font: poppins;
+  display: inline-block;
+  list-style: none;
+}
+.Menu-de-cima ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  
+}
+
+
+
+input{
+   /* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px;
+
+position: absolute;
+width: 465px;
+height: 33px;
+left: 390px;
+top: 605px;
+
+/* white */
+
+background: #FFFFFF;
+/* Default / 1 */
+
+box-shadow: 0px 0px 0px 1px rgba(134, 144, 160, 0.4);
+border-radius: 3px;
+}
+
+h1{
+position: absolute;
+width: 798px;
+height: 128px;
+left: 321px;
+top: 361px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 110%;
+/* or 70px */
+
+text-align: center;
+
+color: rgba(0, 0, 0, 0.8);
+  
+}
+
+h2{
+position: absolute;
+width: 595px;
+height: 52px;
+left: 403px;
+top: 531px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 140%;
+/* or 28px */
+
+text-align: center;
+
+color: rgba(0, 0, 0, 0.8);
+
+}
+#imgbusca{
+
+position: absolute;
+width: 85px;
+height: 27px;
+left: 871px;
+top: 608px;
+
+background: #FF6207;
+border-radius: 5px;
+  
+}
+
+#imglimpa{
+box-sizing: border-box;
+
+position: absolute;
+width: 85px;
+height: 27px;
+left: 964px;
+top: 608px;
+
+background: #FFFFFF;
+border: 1px solid #F46026;
+border-radius: 5px;
+
+}
+
+.texto-imag-bus{
+position: absolute;
+width: 58px;
+height: 24px;
+left: 888px;
+top: 611px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+/* or 131% */
+
+
+color: #FFFFFF;
+
+}
+.texto-imag-limpar{
+position: absolute;
+width: 57px;
+height: 22px;
+left: 981px;
+top: 611px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+color: #F46026;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
