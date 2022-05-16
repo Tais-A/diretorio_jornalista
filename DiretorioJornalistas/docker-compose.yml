@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+
+  web:
+    build: .
+    volumes:
+      - .:/src
+    restart: always
+    env_file:
+      - ./DiretorioJornalistas/.env
+    command: ["bash", "start_server.sh"]
+    ports: 
+      - "8000:8000"
+#     networks:
+#       - banco
+
+# networks:
+#   banco:
+#     external: true
