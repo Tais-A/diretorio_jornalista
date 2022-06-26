@@ -12,9 +12,9 @@ services:
     command: ["bash", "start_server.sh"]
     ports: 
       - "8000:8000"
-#     networks:
-#       - banco
+    networks:
+      - banco
 
-# networks:
-#   banco:
-#     external: true
+networks:
+  banco:
+    external: true

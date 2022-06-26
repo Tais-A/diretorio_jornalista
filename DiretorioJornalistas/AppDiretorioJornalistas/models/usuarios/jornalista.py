@@ -1,4 +1,6 @@
 from AppDiretorioJornalistas.models.usuarios import *
+
+
 from AppDiretorioJornalistas.models.opcoes import RedeSocial, OPCOES_CIDADE, OPCOES_ESTADO, OPCOES_GENERO, OPCOES_ETNIA, OPCOES_ESTADO_CIVIL
 
 
@@ -25,8 +27,8 @@ class Jornalista(models.Model):
     revisor_responsavel = models.ForeignKey(Revisor,on_delete=models.CASCADE)
     token = models.CharField(max_length=255, null=True, blank=True)
 
-    def __str__(self) -> str:
-        return '{}'.format(self.user.username)
+    def __str__(self):
+        return '{}'.format(self.nome_de_guerra)
 
     @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
