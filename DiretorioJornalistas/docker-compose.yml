@@ -17,7 +17,7 @@ services:
     image: postgres
     restart: always
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - /var/www/data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: JpmzB3QC6Xh3
     ports:
@@ -26,7 +26,7 @@ services:
   nginx:
     image: nginx
     volumes:
-      - ./nginx:/etc/nginx
+      - /var/www/nginx:/etc/nginx
       - ./static:/static
     ports:
       - "80:80"
