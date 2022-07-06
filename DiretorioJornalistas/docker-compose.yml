@@ -12,9 +12,23 @@ services:
     command: ["bash", "start_server.sh"]
     ports: 
       - "8000:8000"
-    networks:
-      - banco
 
-networks:
-  banco:
-    external: true
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - /var/www/data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: JpmzB3QC6Xh3
+    ports:
+      - "5432:5432"
+    
+  nginx:
+    image: nginx
+    volumes:
+      - /var/www/nginx:/etc/nginx
+      - ./static:/static
+    ports:
+      - "80:80"
+
+   
