@@ -1,23 +1,40 @@
 # Diretório Nacional de Jornalistas
 
-## Execução
+## Tecnologias Utilizadas
 
-```sh
+- Python Python 3.8.10
+- Django 4.0.5
+- postgres (PostgreSQL) 14.1 (Debian 14.1-1.pgdg110+1)
+## Colaboradores
 
-#backend_api
-cd diretorio_jornalistas/backend/api
-source venv/bin/activate
-pip install -r requirements.txt
-python manage.py runserver
+- Lucas Gonçalves 
+- Tais Alves Oliveira - dtais@outlook.com.br
 
-# Tecnologias Utilizadas
+## Testes
+## Instalação
 
-```
+###### No docker
+- Necessário configurar o arquivo `.env` a partir do arquivo exemplo `env.example`
+- Necessário configurar os dados de acesso do banco de dados postgres no `.env` 
+- `docker-compose up -d`
 
-Usuários e permissões:
+###### Localmente
+- Necessário configurar o arquivo `.env` a partir do arquivo exemplo `env.example`
+- Necessário configurar os dados de acesso do banco de dados postgres no .env 
+- Instalar `venv` com python Python 3.8.10
+- Instalar requirements
+  - `pip install -r requirements.txt`
+- Executar migrações
+  - `python manage.py migrate`
+- executar o projeto com `python manage.py runserver`
 
-Admin: possui permissão em todas as áreas do sistema,
-Revisor: Poderá editar dados de jornalistas, e desativar temporariamente contas
-Jornalista: poderá adicionar e editar dados próprios
-Usuário: pode contatar jornalista e registrar manifestações
-Visitante: poderá visualizar os dados dos jornalistas
+
+## Usage
+## Support
+
+## Roadmap
+## Contributing
+## Authors and acknowledgment
+## License
+
+## Project status

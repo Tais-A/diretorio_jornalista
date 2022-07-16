@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<form action={% url 'jornalistas' %} method="GET">
+    <h3 class="text-center">Buscar um jornalista</h3>
+    <div class="form-row">
+        <div class="col form-group">
+            <input type="text" class="form-control" name="name" placeholder="Buscar por nome">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col form-group mb-0">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

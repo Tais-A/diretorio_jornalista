@@ -1,0 +1,3208 @@
+{
+	"tables": {
+		"8295ede5-19f3-4c8d-a00f-4a026891099f": {
+			"id": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"visible": true,
+			"name": "jornalista",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "916a1b40-7f3e-4316-aa59-dbd575691c18",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d4a83d56-5a8e-4de4-b7ff-12e184361169",
+					"name": "associacao_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "associacao"
+				},
+				{
+					"id": "32e1bb55-dfbc-4a4c-aa1c-e559683b252c",
+					"name": "revisor_responsavel",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "revisor"
+				},
+				{
+					"id": "a7c75488-00ae-4db0-b51b-941d1acfab19",
+					"name": "publico",
+					"datatype": "boolean",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "false",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "362dad56-8265-4fb5-9a4c-23cc564e14e6",
+					"name": "usuario_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "usuario"
+				},
+				{
+					"id": "94efeb52-0815-41c2-9e8a-c1d51ec42488",
+					"name": "nome_de_guerra",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3a2b5999-1024-47ee-9fea-49227d361350",
+					"name": "CPF",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "11"
+				},
+				{
+					"id": "08620a29-7c2b-4183-b522-4cdfc7ded376",
+					"name": "data_de_nascimento",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "295c8368-d706-412d-bbaf-de00129bef77",
+					"name": "telefone",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c0d8faca-ac77-4e24-8303-68d39d267347",
+					"name": "rede_sociais_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "rede_sociais"
+				},
+				{
+					"id": "03be88fb-eaee-48f5-9c2d-e6688ec2d937",
+					"name": "etnia_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "etnia"
+				},
+				{
+					"id": "ea863b61-0a5b-4a84-bbae-e7f76d885a0a",
+					"name": "cidade_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "cidade"
+				},
+				{
+					"id": "44471e29-3361-44ff-a46d-6af3f3ad4080",
+					"name": "genero_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "genero"
+				},
+				{
+					"id": "f0ed0ff0-1d88-498d-9ab8-e82db951a403",
+					"name": "estado_civil_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "estado_civil"
+				},
+				{
+					"id": "a339bbfb-a4ff-40ad-8b90-09b7c885d7a8",
+					"name": "registro",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "92871dfa-b791-4433-bc72-de71f626f16f",
+					"name": "diploma",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "bf3528ee-ab04-46b0-8f2c-7f4e401417e9",
+					"name": "update_at",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "70eae259-be77-4695-b509-4b85ae7a78f9",
+					"name": "create_at",
+					"datatype": "timestamp",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "507e74fa-7605-4908-a9cc-1e75b51ad5cd",
+					"name": "obra_jornalistica_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "obra_jornalistica"
+				}
+			],
+			"relations": [
+				"3509e734-4f0d-4ff1-9fe6-18707a7ecf72",
+				"fe85f2ca-1c3e-406c-a759-6cc49d62acc1",
+				"1f58beb4-272b-4a94-99bf-6d6b686991ed",
+				"12886da3-7dac-4e0b-9f5e-847d3b515bde",
+				"0e20ea34-98b5-4bc6-b899-a7b2ac2e3c01",
+				"9e4be034-e263-4944-8511-567a8920f3bc",
+				"36c736f5-34b6-40fd-9eb1-c220ea6b2545",
+				"b1ea1987-a033-4481-af26-7cc6bc44be1d",
+				"1e9961a0-5109-45fa-a1e6-0a988e72e207",
+				"2830edd1-6c22-4cac-bbe5-6af2664af985"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "06cd1319-212f-4ed9-9561-401f23ee517c",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "629623f6-68ce-4ef0-882e-0f1df6d91709",
+							"colid": "916a1b40-7f3e-4316-aa59-dbd575691c18"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe": {
+			"id": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+			"visible": true,
+			"name": "revisor",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "402f9356-00e8-4459-81ea-fca2375c32f9",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a561ee42-7272-4b9c-abf2-f8974f9e9342",
+					"name": "usuario_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "usuario"
+				},
+				{
+					"id": "63049908-aec6-4c97-ba19-c9974dce349d",
+					"name": "associacao_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "associacao"
+				}
+			],
+			"relations": [
+				"4615b936-6bcb-4793-b6d2-6df2ae6d6959",
+				"3f3bfb58-3d3f-41c4-aa4f-a4ae751adb2c",
+				"b1ea1987-a033-4481-af26-7cc6bc44be1d",
+				"85f815e8-61a3-43e8-b930-e917cd2409c9"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "9f8bcc81-e417-4ec4-a717-5d86ae5b1e7c",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "48e76463-b3b2-4a52-b92a-33c3e8969dba",
+							"colid": "402f9356-00e8-4459-81ea-fca2375c32f9"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"e99f3454-c41b-4004-a708-6ccc1c2a05b0": {
+			"id": "e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+			"visible": true,
+			"name": "obra_jornalistica",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6d42b011-8d2a-46eb-ac8c-775859a0b8b6",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "22d2ed44-f717-42b1-b530-f32fc5868b6f",
+					"name": "titulo",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d9f61235-6512-420d-9b25-75562c36e9ad",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"1bb1116b-9372-47ef-9f0c-6fae33abde67",
+				"c9938195-8494-4727-9717-d71f71376bd5",
+				"2830edd1-6c22-4cac-bbe5-6af2664af985"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "5bd91a25-3ed0-4c6a-b652-3c3ee680d13e",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "93542e79-0434-4fcd-9161-ab6e3f9ccbcc",
+							"colid": "6d42b011-8d2a-46eb-ac8c-775859a0b8b6"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"cefd0df9-a351-4900-a2b9-bad4ade20aeb": {
+			"id": "cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+			"visible": true,
+			"name": "historico_profissional",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "86d46b33-5c24-4278-9d4d-3466ea17be7f",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "1eb9bdfc-1a48-4c62-a245-2baebec42ca1",
+					"name": "veiculo_de_comunicacao_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "veiculo_de_comunicacao"
+				},
+				{
+					"id": "85b40c79-2174-4392-b0e0-88ffeb5a2d06",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "20eed9f8-caa3-4b0c-b6d9-bcbe222f4f7d",
+					"name": "cargo",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "95adabc6-7755-4831-9731-27cb4820aa02",
+					"name": "data_inicio",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "37d30b1c-5a3b-46fb-957c-456f370a1e2e",
+					"name": "data_de_termino",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "aa159c8a-0663-4d2e-b0ce-a13dba75df8f",
+					"name": "duracao",
+					"datatype": "daterange",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "5e24ca87-e0b3-4be6-9118-39b9fd67a8a9",
+					"name": "referencia",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "a77195fc-afe9-4382-8430-b9bcc5e3721d",
+					"name": "contato_da_referencia",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "0dc40a99-4205-41aa-abac-30e2d09e75d7",
+					"name": "validado",
+					"datatype": "boolean",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "eeb887e3-ddac-4902-9fd3-75e11afff520",
+					"name": "revisor_responsavel",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "revisor"
+				},
+				{
+					"id": "75e8f2d5-6a91-4c49-ae79-155ba99cddac",
+					"name": "jornalista_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "jornalista"
+				}
+			],
+			"relations": [
+				"54afe2c9-9f20-46db-a506-242405b8dc28",
+				"9e4be034-e263-4944-8511-567a8920f3bc",
+				"85f815e8-61a3-43e8-b930-e917cd2409c9"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "bec9e795-3412-4d1e-8ace-3359069f8cc9",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "a7faef2f-134c-40a4-85d8-a71d5f06f63d",
+							"colid": "86d46b33-5c24-4278-9d4d-3466ea17be7f"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"d9951cad-3ccc-42ef-9c30-c20ded30e880": {
+			"id": "d9951cad-3ccc-42ef-9c30-c20ded30e880",
+			"visible": true,
+			"name": "usuario",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c53575d4-aa41-4a29-9b4a-90212eaedadf",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4b4a8a13-5afc-4a64-9890-887cb067dfc2",
+					"name": "nome",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ca195335-6d9a-479e-9319-6f73b9d54f4c",
+					"name": "sobrenome",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d2ebcfe7-963a-40c5-8b34-6ad047c0c915",
+					"name": "email",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3775dd94-0bad-4f2f-a16f-5f74cbe8e329",
+					"name": "senha",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "b4fcff1e-4a5d-4c86-8d9a-2820eeb6bb0e",
+					"name": "adminstrador",
+					"datatype": "boolean",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"0e20ea34-98b5-4bc6-b899-a7b2ac2e3c01",
+				"4615b936-6bcb-4793-b6d2-6df2ae6d6959"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "7e747d3f-8205-4640-a802-4b8fc0f47f1e",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "c08222d5-35ba-45e4-b512-f3580d310e72",
+							"colid": "c53575d4-aa41-4a29-9b4a-90212eaedadf"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			},
+			"customCode": ""
+		},
+		"13f352a4-14cb-42b7-b653-af514f7adcfe": {
+			"id": "13f352a4-14cb-42b7-b653-af514f7adcfe",
+			"visible": true,
+			"name": "etnia",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "616a1585-e535-4d61-be79-c56e63aa2361",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "b0d5e61f-b6b2-48fa-8d5c-68556cb2ec84",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"3509e734-4f0d-4ff1-9fe6-18707a7ecf72"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "e1dbe08b-9a78-4810-9d2f-7bd64a120115",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "2eb3e67d-c9cf-4ce5-98b1-ded3b828c864",
+							"colid": "616a1585-e535-4d61-be79-c56e63aa2361"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"1d55da32-bd86-4b9e-8319-5def92346842": {
+			"id": "1d55da32-bd86-4b9e-8319-5def92346842",
+			"visible": true,
+			"name": "pais",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"5f88a40c-691a-49e5-b8cc-c0bcfc342683"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "e5364643-ca7e-48c9-b703-672dd08e47b8",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"dca82d09-571f-46c0-bb67-4cbe2d3c7cb6": {
+			"id": "dca82d09-571f-46c0-bb67-4cbe2d3c7cb6",
+			"visible": true,
+			"name": "estado",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d170a28f-34e0-448f-b767-671b22ea9d85",
+					"name": "pais_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "pais"
+				}
+			],
+			"relations": [
+				"5f88a40c-691a-49e5-b8cc-c0bcfc342683",
+				"4811d4c9-88e1-46b9-b41d-2837d70d80b8"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "fa0d33cf-4dde-44fa-a2d7-baabe7c7a030",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"8119376f-8538-439d-acc3-503b1f6a4428": {
+			"id": "8119376f-8538-439d-acc3-503b1f6a4428",
+			"visible": true,
+			"name": "cidade",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4a0b1628-3853-4491-93b2-1516337359d2",
+					"name": "estado_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "estado"
+				},
+				{
+					"id": "6fad55f1-5ffa-4dd0-bea8-84975f9f67e5",
+					"name": "CEP",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"4811d4c9-88e1-46b9-b41d-2837d70d80b8",
+				"fe85f2ca-1c3e-406c-a759-6cc49d62acc1",
+				"4bd2f9d4-5bdf-4961-869b-68b6c0a75560"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "09badb8b-02a5-4b5a-90c5-0260fda2249d",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"d233830a-3658-4b7c-b008-cbbb6c867ae2": {
+			"id": "d233830a-3658-4b7c-b008-cbbb6c867ae2",
+			"visible": true,
+			"name": "genero",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"1f58beb4-272b-4a94-99bf-6d6b686991ed"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b87e249a-e554-4b80-bed0-a33ec00ba40c",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"6f9a1a83-57f1-41bb-920d-5551d4567271": {
+			"id": "6f9a1a83-57f1-41bb-920d-5551d4567271",
+			"visible": true,
+			"name": "estado_civil",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"12886da3-7dac-4e0b-9f5e-847d3b515bde"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "a262ec50-9b66-4ecf-b9eb-8b006353e161",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"f92d9dab-e46c-4f3c-b594-04cc2c002d84": {
+			"id": "f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+			"visible": true,
+			"name": "associacao",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "c45556b6-1288-4981-9c39-441b03e03223",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "18d44058-4c9e-4eb8-bbff-6f7727396605",
+					"name": "nome_fantasia",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c2f1612e-d0f9-4efb-864e-98c24e0aed50",
+					"name": "razao_social",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "e1fd23de-387e-40bf-9cb0-43c575e9deab",
+					"name": "cnpj",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "xx.xxx.xxx/0001-xx",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"estimatedSize": "14"
+				},
+				{
+					"id": "5897d6b6-6832-4969-ae3d-e1987bf5170a",
+					"name": "telefone",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "309b5399-59cb-406c-875c-6673abd41eb8",
+					"name": "email",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "49cc63b6-fb4e-4673-9e55-f280f37441af",
+					"name": "presidente",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "35e583ab-35d9-4baf-8699-a11227d1a6c8",
+					"name": "rede_sociais_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "rede_sociais"
+				}
+			],
+			"relations": [
+				"3f3bfb58-3d3f-41c4-aa4f-a4ae751adb2c",
+				"36c736f5-34b6-40fd-9eb1-c220ea6b2545",
+				"544f157e-de6a-4e9b-a79e-5b16b11a1d19"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "749b2ea2-6c98-442f-a719-4fb26ba3000f",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "c627d2b1-693c-4132-bf45-0b87a78c71e1",
+							"colid": "c45556b6-1288-4981-9c39-441b03e03223"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"98c3b08e-5d5c-4cea-973d-51cdbb0b86af": {
+			"id": "98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+			"visible": true,
+			"name": "veiculo_de_comunicacao",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "4989b841-bdf1-4b45-a6d5-46f824fc28b1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "2244f7e2-19ae-4fd8-96a6-e0e7768b0b75",
+					"name": "nome",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "01bba3b1-4e61-4c1d-988e-e863370e54fa",
+					"name": "tipo_de_veiculo_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "tipo_de_veiculo"
+				}
+			],
+			"relations": [
+				"ea106566-6934-4dfc-9bb6-5e228f945155",
+				"c30e6f7b-fa20-4668-aee9-8ab337c2703a",
+				"54afe2c9-9f20-46db-a506-242405b8dc28"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "bf8ed254-dae8-4cf5-a8a6-b13a6ab9b3d5",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "206ba280-5180-4fa1-b740-295dbd9d07fd",
+							"colid": "4989b841-bdf1-4b45-a6d5-46f824fc28b1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"c5bbf59b-28ea-401e-b401-c2da0a399a4b": {
+			"id": "c5bbf59b-28ea-401e-b401-c2da0a399a4b",
+			"visible": true,
+			"name": "tipo_de_veiculo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "d03db6c2-0ee0-4c23-a790-7dd5550f10f2",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9cf0e6c4-0963-4eaf-aa36-34d73864fa5c",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"ea106566-6934-4dfc-9bb6-5e228f945155"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b6dbab3c-a9f9-4715-aebb-236b1eb4ea22",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "0680f6b1-612c-4033-9d57-09d4d958cdc9",
+							"colid": "d03db6c2-0ee0-4c23-a790-7dd5550f10f2"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"f2c6e939-3baa-4485-8760-c5e0d79cc179": {
+			"id": "f2c6e939-3baa-4485-8760-c5e0d79cc179",
+			"visible": true,
+			"name": "tipo",
+			"desc": "diz se a publicação é um artigo, coluna, entrevista, reportagem etc",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac3a4a46-1689-4e76-8415-6804e2e367e8",
+					"name": "nome",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"81202243-1573-4deb-9e22-018f9a6743bf"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c514b585-0fbe-4f5d-b7c1-b5bbeef8a04b",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"0cdb42b6-5105-45a2-bcdd-c018fbe59362": {
+			"id": "0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+			"visible": true,
+			"name": "publicao",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "fff4e56e-e782-49aa-91b2-45a57afc09cb",
+					"name": "veiculo_de_comunicacao_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "veiculo_de_comunicacao"
+				},
+				{
+					"id": "0d9be9cc-d0c7-4a49-990d-648063873126",
+					"name": "tipo_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "tipo"
+				},
+				{
+					"id": "1a4668cb-2fd8-44b1-8e82-7c50af467b9c",
+					"name": "data",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "01408f53-db6e-4b8c-9474-dd683aedc971",
+					"name": "link",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d58771f2-2f8e-4f28-8fac-6890faecdd20",
+					"name": "anexo",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "584f952d-ab5e-4a0b-abb3-44ef07646987",
+					"name": "obra_jornalistica_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "obra_jornalistica"
+				}
+			],
+			"relations": [
+				"c30e6f7b-fa20-4668-aee9-8ab337c2703a",
+				"1bb1116b-9372-47ef-9f0c-6fae33abde67",
+				"81202243-1573-4deb-9e22-018f9a6743bf"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "72238f96-6ba8-4858-8f69-f3f4f6ca1545",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"6a8d85a8-1f90-4528-a683-ca4e39c9822c": {
+			"id": "6a8d85a8-1f90-4528-a683-ca4e39c9822c",
+			"visible": true,
+			"name": "livro",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "68bf039d-edb8-4a71-8ac9-7537ceba680c",
+					"name": "isbn10",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "57eb657d-19fd-4af5-8a9b-9028f1757ba9",
+					"name": "isbn13",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "551685c9-7dda-4a1c-88ce-41a32ee96e36",
+					"name": "editora",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "43367750-fb35-4932-a8e4-6bbdefd622c4",
+					"name": "ano",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "13ae7a09-052d-44a3-87e5-e9d4ecfb855d",
+					"name": "paginas",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "0a196047-06e5-4f6c-8809-243b664f085d",
+					"name": "obra_jornalistica_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "obra_jornalistica"
+				},
+				{
+					"id": "f19f8b32-f777-4f0b-97d3-733a7107a0da",
+					"name": "cidade_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "cidade"
+				}
+			],
+			"relations": [
+				"c9938195-8494-4727-9717-d71f71376bd5",
+				"4bd2f9d4-5bdf-4961-869b-68b6c0a75560"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "d1918984-f454-4b10-aeff-45c036ae9cf6",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "f7bd6298-0b45-49f0-8fa7-2753fac0e98d",
+							"colid": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415": {
+			"id": "f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415",
+			"visible": true,
+			"name": "tipo_de_rede_social",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "9ee8a31a-2794-470b-8766-1f23b8f09d0b",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "cdcdff4f-fd87-4494-b040-ae527ccec318",
+					"name": "descricao",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"48302c24-18c9-448f-93b6-37fb8765b825"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "f5180c6b-d585-4589-8da2-b4f10cb72ea2",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "4b2db7b3-e6b1-410d-a07b-e8da6b569f82",
+							"colid": "9ee8a31a-2794-470b-8766-1f23b8f09d0b"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"8be1e0fe-531a-4a2b-8462-1680cf139e67": {
+			"id": "8be1e0fe-531a-4a2b-8462-1680cf139e67",
+			"visible": true,
+			"name": "rede_sociais",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "177fc8b8-0b8d-4a3a-889c-52776afc8179",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "5dd41ed7-1c49-4347-8969-b14861beb163",
+					"name": "link",
+					"datatype": "varchar",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4b75f27d-f4fc-4e43-b9d7-61daa9adc143",
+					"name": "tipo_de_rede_social_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "tipo_de_rede_social"
+				}
+			],
+			"relations": [
+				"48302c24-18c9-448f-93b6-37fb8765b825",
+				"1e9961a0-5109-45fa-a1e6-0a988e72e207",
+				"544f157e-de6a-4e9b-a79e-5b16b11a1d19"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "4b6d07dc-a3f7-4e5d-8a55-625f3ed962b8",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "580488c2-323f-4375-8d77-90709ffa6728",
+							"colid": "177fc8b8-0b8d-4a3a-889c-52776afc8179"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		}
+	},
+	"relations": {
+		"3509e734-4f0d-4ff1-9fe6-18707a7ecf72": {
+			"id": "3509e734-4f0d-4ff1-9fe6-18707a7ecf72",
+			"visible": true,
+			"name": "etnia_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e1dbe08b-9a78-4810-9d2f-7bd64a120115",
+			"parent": "13f352a4-14cb-42b7-b653-af514f7adcfe",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "16b407c9-e453-4dd3-9568-712ff6af24f8",
+					"parentcol": "616a1585-e535-4d61-be79-c56e63aa2361",
+					"childcol": "03be88fb-eaee-48f5-9c2d-e6688ec2d937"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"5f88a40c-691a-49e5-b8cc-c0bcfc342683": {
+			"id": "5f88a40c-691a-49e5-b8cc-c0bcfc342683",
+			"visible": true,
+			"name": "pais_estado",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "e5364643-ca7e-48c9-b703-672dd08e47b8",
+			"parent": "1d55da32-bd86-4b9e-8319-5def92346842",
+			"child": "dca82d09-571f-46c0-bb67-4cbe2d3c7cb6",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "53442097-574b-4b70-859b-5301eed8eb95",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "d170a28f-34e0-448f-b767-671b22ea9d85"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4811d4c9-88e1-46b9-b41d-2837d70d80b8": {
+			"id": "4811d4c9-88e1-46b9-b41d-2837d70d80b8",
+			"visible": true,
+			"name": "estado_cidade",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "fa0d33cf-4dde-44fa-a2d7-baabe7c7a030",
+			"parent": "dca82d09-571f-46c0-bb67-4cbe2d3c7cb6",
+			"child": "8119376f-8538-439d-acc3-503b1f6a4428",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "f6d11efd-eb0f-46ef-b89a-3e391288dacd",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "4a0b1628-3853-4491-93b2-1516337359d2"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"fe85f2ca-1c3e-406c-a759-6cc49d62acc1": {
+			"id": "fe85f2ca-1c3e-406c-a759-6cc49d62acc1",
+			"visible": true,
+			"name": "cidade_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "09badb8b-02a5-4b5a-90c5-0260fda2249d",
+			"parent": "8119376f-8538-439d-acc3-503b1f6a4428",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "eeb9e31b-912b-4479-bd52-2af4f7197af1",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "ea863b61-0a5b-4a84-bbae-e7f76d885a0a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1f58beb4-272b-4a94-99bf-6d6b686991ed": {
+			"id": "1f58beb4-272b-4a94-99bf-6d6b686991ed",
+			"visible": true,
+			"name": "genero_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b87e249a-e554-4b80-bed0-a33ec00ba40c",
+			"parent": "d233830a-3658-4b7c-b008-cbbb6c867ae2",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "e055dacc-7741-425d-878a-c3d06aa2a1c4",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "44471e29-3361-44ff-a46d-6af3f3ad4080"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"12886da3-7dac-4e0b-9f5e-847d3b515bde": {
+			"id": "12886da3-7dac-4e0b-9f5e-847d3b515bde",
+			"visible": true,
+			"name": "estado_civil_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "a262ec50-9b66-4ecf-b9eb-8b006353e161",
+			"parent": "6f9a1a83-57f1-41bb-920d-5551d4567271",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "4379501c-282f-4ae2-ad98-9d899a4cbdc4",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "f0ed0ff0-1d88-498d-9ab8-e82db951a403"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"0e20ea34-98b5-4bc6-b899-a7b2ac2e3c01": {
+			"id": "0e20ea34-98b5-4bc6-b899-a7b2ac2e3c01",
+			"visible": true,
+			"name": "usuario_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "7e747d3f-8205-4640-a802-4b8fc0f47f1e",
+			"parent": "d9951cad-3ccc-42ef-9c30-c20ded30e880",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "one",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "59ce2b4a-5f69-414a-9271-fb95f5e5054d",
+					"parentcol": "c53575d4-aa41-4a29-9b4a-90212eaedadf",
+					"childcol": "362dad56-8265-4fb5-9a4c-23cc564e14e6"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4615b936-6bcb-4793-b6d2-6df2ae6d6959": {
+			"id": "4615b936-6bcb-4793-b6d2-6df2ae6d6959",
+			"visible": true,
+			"name": "usuario_revisor",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "7e747d3f-8205-4640-a802-4b8fc0f47f1e",
+			"parent": "d9951cad-3ccc-42ef-9c30-c20ded30e880",
+			"child": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "one",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d9a0d2fd-d82b-4a5a-81d8-0847198619ae",
+					"parentcol": "c53575d4-aa41-4a29-9b4a-90212eaedadf",
+					"childcol": "a561ee42-7272-4b9c-abf2-f8974f9e9342"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"3f3bfb58-3d3f-41c4-aa4f-a4ae751adb2c": {
+			"id": "3f3bfb58-3d3f-41c4-aa4f-a4ae751adb2c",
+			"visible": true,
+			"name": "associacao_revisor",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "749b2ea2-6c98-442f-a719-4fb26ba3000f",
+			"parent": "f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+			"child": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "332a978a-5646-4372-bcfd-279e2f3d91e1",
+					"parentcol": "c45556b6-1288-4981-9c39-441b03e03223",
+					"childcol": "63049908-aec6-4c97-ba19-c9974dce349d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"ea106566-6934-4dfc-9bb6-5e228f945155": {
+			"id": "ea106566-6934-4dfc-9bb6-5e228f945155",
+			"visible": true,
+			"name": "tipo_de_veiculo_veiculo_de_comunicacao",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b6dbab3c-a9f9-4715-aebb-236b1eb4ea22",
+			"parent": "c5bbf59b-28ea-401e-b401-c2da0a399a4b",
+			"child": "98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "d1c29d84-9848-4a99-b518-7d104c12f78b",
+					"parentcol": "d03db6c2-0ee0-4c23-a790-7dd5550f10f2",
+					"childcol": "01bba3b1-4e61-4c1d-988e-e863370e54fa"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"c30e6f7b-fa20-4668-aee9-8ab337c2703a": {
+			"id": "c30e6f7b-fa20-4668-aee9-8ab337c2703a",
+			"visible": true,
+			"name": "veiculo_de_comunicacao_artigo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "bf8ed254-dae8-4cf5-a8a6-b13a6ab9b3d5",
+			"parent": "98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+			"child": "0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "6976dbfa-dae2-4d97-b240-703f35908329",
+					"parentcol": "4989b841-bdf1-4b45-a6d5-46f824fc28b1",
+					"childcol": "fff4e56e-e782-49aa-91b2-45a57afc09cb"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1bb1116b-9372-47ef-9f0c-6fae33abde67": {
+			"id": "1bb1116b-9372-47ef-9f0c-6fae33abde67",
+			"visible": true,
+			"name": "obra_jornalistica_artigo",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "5bd91a25-3ed0-4c6a-b652-3c3ee680d13e",
+			"parent": "e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+			"child": "0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "7dd1e679-0a8b-4c91-8631-a384566366ad",
+					"parentcol": "6d42b011-8d2a-46eb-ac8c-775859a0b8b6",
+					"childcol": "584f952d-ab5e-4a0b-abb3-44ef07646987"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"81202243-1573-4deb-9e22-018f9a6743bf": {
+			"id": "81202243-1573-4deb-9e22-018f9a6743bf",
+			"visible": true,
+			"name": "tipo_publicao",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "c514b585-0fbe-4f5d-b7c1-b5bbeef8a04b",
+			"parent": "f2c6e939-3baa-4485-8760-c5e0d79cc179",
+			"child": "0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "30144563-fd43-49f7-93a8-6df7afb0f792",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "0d9be9cc-d0c7-4a49-990d-648063873126"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"c9938195-8494-4727-9717-d71f71376bd5": {
+			"id": "c9938195-8494-4727-9717-d71f71376bd5",
+			"visible": true,
+			"name": "obra_jornalistica_tipo_copy",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "5bd91a25-3ed0-4c6a-b652-3c3ee680d13e",
+			"parent": "e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+			"child": "6a8d85a8-1f90-4528-a683-ca4e39c9822c",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "20771da3-7197-48ce-b9df-d3d11024e273",
+					"parentcol": "6d42b011-8d2a-46eb-ac8c-775859a0b8b6",
+					"childcol": "0a196047-06e5-4f6c-8809-243b664f085d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"4bd2f9d4-5bdf-4961-869b-68b6c0a75560": {
+			"id": "4bd2f9d4-5bdf-4961-869b-68b6c0a75560",
+			"visible": true,
+			"name": "cidade_livro",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "09badb8b-02a5-4b5a-90c5-0260fda2249d",
+			"parent": "8119376f-8538-439d-acc3-503b1f6a4428",
+			"child": "6a8d85a8-1f90-4528-a683-ca4e39c9822c",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "32cc91f3-a460-40db-8018-1d33e5ab65d5",
+					"parentcol": "1aa4dcf3-5728-4ce4-bffb-cf9c97855fa1",
+					"childcol": "f19f8b32-f777-4f0b-97d3-733a7107a0da"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"54afe2c9-9f20-46db-a506-242405b8dc28": {
+			"id": "54afe2c9-9f20-46db-a506-242405b8dc28",
+			"visible": true,
+			"name": "veiculo_de_comunicacao_historico_jornalistico",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "bf8ed254-dae8-4cf5-a8a6-b13a6ab9b3d5",
+			"parent": "98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+			"child": "cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "8a5bea5c-4110-4a04-a286-4fdbc11db264",
+					"parentcol": "4989b841-bdf1-4b45-a6d5-46f824fc28b1",
+					"childcol": "1eb9bdfc-1a48-4c62-a245-2baebec42ca1"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"9e4be034-e263-4944-8511-567a8920f3bc": {
+			"id": "9e4be034-e263-4944-8511-567a8920f3bc",
+			"visible": true,
+			"name": "jornalista_historico_jornalistico",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "06cd1319-212f-4ed9-9561-401f23ee517c",
+			"parent": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"child": "cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "4dcc2db2-c2bf-4903-a968-28980a02bfff",
+					"parentcol": "916a1b40-7f3e-4316-aa59-dbd575691c18",
+					"childcol": "75e8f2d5-6a91-4c49-ae79-155ba99cddac"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"36c736f5-34b6-40fd-9eb1-c220ea6b2545": {
+			"id": "36c736f5-34b6-40fd-9eb1-c220ea6b2545",
+			"visible": true,
+			"name": "associacao_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "749b2ea2-6c98-442f-a719-4fb26ba3000f",
+			"parent": "f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "2f16430b-4cb1-44b1-86f5-8ac947477b4d",
+					"parentcol": "c45556b6-1288-4981-9c39-441b03e03223",
+					"childcol": "d4a83d56-5a8e-4de4-b7ff-12e184361169"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"b1ea1987-a033-4481-af26-7cc6bc44be1d": {
+			"id": "b1ea1987-a033-4481-af26-7cc6bc44be1d",
+			"visible": true,
+			"name": "revisor_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "9f8bcc81-e417-4ec4-a717-5d86ae5b1e7c",
+			"parent": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "false",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "1cdd0990-9b64-45ae-a0cd-5444a16ac584",
+					"parentcol": "402f9356-00e8-4459-81ea-fca2375c32f9",
+					"childcol": "32e1bb55-dfbc-4a4c-aa1c-e559683b252c"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"85f815e8-61a3-43e8-b930-e917cd2409c9": {
+			"id": "85f815e8-61a3-43e8-b930-e917cd2409c9",
+			"visible": true,
+			"name": "revisor_historico_jornalistico",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "9f8bcc81-e417-4ec4-a717-5d86ae5b1e7c",
+			"parent": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+			"child": "cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "be90f13f-0a6d-4958-9496-bd589715b8b1",
+					"parentcol": "402f9356-00e8-4459-81ea-fca2375c32f9",
+					"childcol": "eeb887e3-ddac-4902-9fd3-75e11afff520"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"48302c24-18c9-448f-93b6-37fb8765b825": {
+			"id": "48302c24-18c9-448f-93b6-37fb8765b825",
+			"visible": true,
+			"name": "tipo_de_rede_social_rede_sociais",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "f5180c6b-d585-4589-8da2-b4f10cb72ea2",
+			"parent": "f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415",
+			"child": "8be1e0fe-531a-4a2b-8462-1680cf139e67",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "661ed148-31dd-4ff5-b70a-a095c1e9c2c0",
+					"parentcol": "9ee8a31a-2794-470b-8766-1f23b8f09d0b",
+					"childcol": "4b75f27d-f4fc-4e43-b9d7-61daa9adc143"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1e9961a0-5109-45fa-a1e6-0a988e72e207": {
+			"id": "1e9961a0-5109-45fa-a1e6-0a988e72e207",
+			"visible": true,
+			"name": "rede_sociais_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "4b6d07dc-a3f7-4e5d-8a55-625f3ed962b8",
+			"parent": "8be1e0fe-531a-4a2b-8462-1680cf139e67",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "abd9a8fe-3488-4c59-b32d-e89ab5103004",
+					"parentcol": "177fc8b8-0b8d-4a3a-889c-52776afc8179",
+					"childcol": "c0d8faca-ac77-4e24-8303-68d39d267347"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"544f157e-de6a-4e9b-a79e-5b16b11a1d19": {
+			"id": "544f157e-de6a-4e9b-a79e-5b16b11a1d19",
+			"visible": true,
+			"name": "rede_sociais_associacao",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "4b6d07dc-a3f7-4e5d-8a55-625f3ed962b8",
+			"parent": "8be1e0fe-531a-4a2b-8462-1680cf139e67",
+			"child": "f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "63dee961-1a94-4e23-8a0c-757318367a3e",
+					"parentcol": "177fc8b8-0b8d-4a3a-889c-52776afc8179",
+					"childcol": "35e583ab-35d9-4baf-8699-a11227d1a6c8"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"2830edd1-6c22-4cac-bbe5-6af2664af985": {
+			"id": "2830edd1-6c22-4cac-bbe5-6af2664af985",
+			"visible": true,
+			"name": "obra_jornalistica_jornalista",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "5bd91a25-3ed0-4c6a-b652-3c3ee680d13e",
+			"parent": "e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+			"child": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+			"c_mp": "false",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "a87a1ad3-4701-4454-bc19-eb05d6f8537e",
+					"parentcol": "6d42b011-8d2a-46eb-ac8c-775859a0b8b6",
+					"childcol": "507e74fa-7605-4908-a9cc-1e75b51ad5cd"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "diretorio_jornalistas",
+		"id": "c5c0bed0-960b-4ba5-89eb-2931e539285f",
+		"activeDiagram": "0fac0bdb-c51f-4380-ac45-832a1ed72b6c",
+		"desc": "",
+		"path": "",
+		"type": "PG",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 4,
+			"minor": 5,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": true,
+		"cardinalityIsDisplayed": true,
+		"estimatedSizeIsDisplayed": true,
+		"stickyParentIsDisplayed": false,
+		"def_coltopk": true,
+		"pg": {
+			"schema": ""
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed"
+		},
+		"lastSaved": "Sun Jun 05 2022 18:58:37 GMT-0300 (Brasilia Standard Time)",
+		"writeFileParam": false
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"0fac0bdb-c51f-4380-ac45-832a1ed72b6c": {
+			"name": "obra_jornalistica",
+			"description": "",
+			"id": "0fac0bdb-c51f-4380-ac45-832a1ed72b6c",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"8295ede5-19f3-4c8d-a00f-4a026891099f": {
+					"referencedItemId": "8295ede5-19f3-4c8d-a00f-4a026891099f",
+					"x": 443,
+					"y": 699,
+					"gHeight": 376,
+					"gWidth": 280,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe": {
+					"referencedItemId": "57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+					"x": 418,
+					"y": 278,
+					"gHeight": 88,
+					"gWidth": 271,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"e99f3454-c41b-4004-a708-6ccc1c2a05b0": {
+					"referencedItemId": "e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+					"x": 989,
+					"y": 464,
+					"gHeight": 80,
+					"gWidth": 206,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"cefd0df9-a351-4900-a2b9-bad4ade20aeb": {
+					"referencedItemId": "cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+					"x": 921,
+					"y": 56,
+					"gHeight": 250,
+					"gWidth": 355,
+					"color": "#ffffff",
+					"background": "#ff9800",
+					"resized": true,
+					"autoExpand": true
+				},
+				"d9951cad-3ccc-42ef-9c30-c20ded30e880": {
+					"referencedItemId": "d9951cad-3ccc-42ef-9c30-c20ded30e880",
+					"x": 45,
+					"y": 541,
+					"gHeight": 133,
+					"gWidth": 233,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"13f352a4-14cb-42b7-b653-af514f7adcfe": {
+					"referencedItemId": "13f352a4-14cb-42b7-b653-af514f7adcfe",
+					"x": 972,
+					"y": 840,
+					"gHeight": 70,
+					"gWidth": 203,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": true,
+					"autoExpand": true
+				},
+				"1d55da32-bd86-4b9e-8319-5def92346842": {
+					"referencedItemId": "1d55da32-bd86-4b9e-8319-5def92346842",
+					"x": 1427,
+					"y": 1082,
+					"gHeight": 62,
+					"gWidth": 206,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": false,
+					"autoExpand": true
+				},
+				"dca82d09-571f-46c0-bb67-4cbe2d3c7cb6": {
+					"referencedItemId": "dca82d09-571f-46c0-bb67-4cbe2d3c7cb6",
+					"x": 1430,
+					"y": 956,
+					"gHeight": 80,
+					"gWidth": 206,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": false,
+					"autoExpand": true
+				},
+				"8119376f-8538-439d-acc3-503b1f6a4428": {
+					"referencedItemId": "8119376f-8538-439d-acc3-503b1f6a4428",
+					"x": 971,
+					"y": 922,
+					"gHeight": 106,
+					"gWidth": 203,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": true,
+					"autoExpand": true
+				},
+				"d233830a-3658-4b7c-b008-cbbb6c867ae2": {
+					"referencedItemId": "d233830a-3658-4b7c-b008-cbbb6c867ae2",
+					"x": 977,
+					"y": 1047,
+					"gHeight": 70,
+					"gWidth": 188,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": true,
+					"autoExpand": true
+				},
+				"6f9a1a83-57f1-41bb-920d-5551d4567271": {
+					"referencedItemId": "6f9a1a83-57f1-41bb-920d-5551d4567271",
+					"x": 976,
+					"y": 1128,
+					"gHeight": 70,
+					"gWidth": 190,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": true,
+					"autoExpand": true
+				},
+				"f92d9dab-e46c-4f3c-b594-04cc2c002d84": {
+					"referencedItemId": "f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+					"x": 421,
+					"y": 445,
+					"gHeight": 178,
+					"gWidth": 280,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"98c3b08e-5d5c-4cea-973d-51cdbb0b86af": {
+					"referencedItemId": "98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+					"x": 1444,
+					"y": 298,
+					"gHeight": 80,
+					"gWidth": 253,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c5bbf59b-28ea-401e-b401-c2da0a399a4b": {
+					"referencedItemId": "c5bbf59b-28ea-401e-b401-c2da0a399a4b",
+					"x": 1826,
+					"y": 502,
+					"gHeight": 62,
+					"gWidth": 206,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"f2c6e939-3baa-4485-8760-c5e0d79cc179": {
+					"referencedItemId": "f2c6e939-3baa-4485-8760-c5e0d79cc179",
+					"x": 1506,
+					"y": 630,
+					"gHeight": 62,
+					"gWidth": 185,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"0cdb42b6-5105-45a2-bcdd-c018fbe59362": {
+					"referencedItemId": "0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+					"x": 1421,
+					"y": 423,
+					"gHeight": 152,
+					"gWidth": 304,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"6a8d85a8-1f90-4528-a683-ca4e39c9822c": {
+					"referencedItemId": "6a8d85a8-1f90-4528-a683-ca4e39c9822c",
+					"x": 1736,
+					"y": 734,
+					"gHeight": 170,
+					"gWidth": 258,
+					"color": "#ffffff",
+					"background": "#8bc34a",
+					"resized": false,
+					"autoExpand": true
+				},
+				"f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415": {
+					"referencedItemId": "f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415",
+					"x": 969,
+					"y": 636,
+					"gHeight": 70,
+					"gWidth": 190,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": true,
+					"autoExpand": true
+				},
+				"8be1e0fe-531a-4a2b-8462-1680cf139e67": {
+					"referencedItemId": "8be1e0fe-531a-4a2b-8462-1680cf139e67",
+					"x": 973,
+					"y": 730,
+					"gHeight": 80,
+					"gWidth": 276,
+					"color": "#ffffff",
+					"background": "#9c27b0",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"8295ede5-19f3-4c8d-a00f-4a026891099f",
+		"57c94c2e-a4ad-4e9d-a2f0-e49309d60ffe",
+		"e99f3454-c41b-4004-a708-6ccc1c2a05b0",
+		"cefd0df9-a351-4900-a2b9-bad4ade20aeb",
+		"d9951cad-3ccc-42ef-9c30-c20ded30e880",
+		"13f352a4-14cb-42b7-b653-af514f7adcfe",
+		"1d55da32-bd86-4b9e-8319-5def92346842",
+		"dca82d09-571f-46c0-bb67-4cbe2d3c7cb6",
+		"8119376f-8538-439d-acc3-503b1f6a4428",
+		"d233830a-3658-4b7c-b008-cbbb6c867ae2",
+		"6f9a1a83-57f1-41bb-920d-5551d4567271",
+		"f92d9dab-e46c-4f3c-b594-04cc2c002d84",
+		"98c3b08e-5d5c-4cea-973d-51cdbb0b86af",
+		"c5bbf59b-28ea-401e-b401-c2da0a399a4b",
+		"f2c6e939-3baa-4485-8760-c5e0d79cc179",
+		"0cdb42b6-5105-45a2-bcdd-c018fbe59362",
+		"6a8d85a8-1f90-4528-a683-ca4e39c9822c",
+		"f505c0bb-b9ea-4a3f-a1bf-6aca6dcdb415",
+		"8be1e0fe-531a-4a2b-8462-1680cf139e67",
+		"3509e734-4f0d-4ff1-9fe6-18707a7ecf72",
+		"5f88a40c-691a-49e5-b8cc-c0bcfc342683",
+		"4811d4c9-88e1-46b9-b41d-2837d70d80b8",
+		"fe85f2ca-1c3e-406c-a759-6cc49d62acc1",
+		"1f58beb4-272b-4a94-99bf-6d6b686991ed",
+		"12886da3-7dac-4e0b-9f5e-847d3b515bde",
+		"0e20ea34-98b5-4bc6-b899-a7b2ac2e3c01",
+		"4615b936-6bcb-4793-b6d2-6df2ae6d6959",
+		"3f3bfb58-3d3f-41c4-aa4f-a4ae751adb2c",
+		"ea106566-6934-4dfc-9bb6-5e228f945155",
+		"c30e6f7b-fa20-4668-aee9-8ab337c2703a",
+		"1bb1116b-9372-47ef-9f0c-6fae33abde67",
+		"81202243-1573-4deb-9e22-018f9a6743bf",
+		"c9938195-8494-4727-9717-d71f71376bd5",
+		"4bd2f9d4-5bdf-4961-869b-68b6c0a75560",
+		"54afe2c9-9f20-46db-a506-242405b8dc28",
+		"9e4be034-e263-4944-8511-567a8920f3bc",
+		"36c736f5-34b6-40fd-9eb1-c220ea6b2545",
+		"b1ea1987-a033-4481-af26-7cc6bc44be1d",
+		"85f815e8-61a3-43e8-b930-e917cd2409c9",
+		"48302c24-18c9-448f-93b6-37fb8765b825",
+		"1e9961a0-5109-45fa-a1e6-0a988e72e207",
+		"544f157e-de6a-4e9b-a79e-5b16b11a1d19",
+		"2830edd1-6c22-4cac-bbe5-6af2664af985"
+	]
+}
