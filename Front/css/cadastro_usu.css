@@ -133,12 +133,12 @@ body {
     
 }
 .image-pessoa{
-  position: absolute;
-  width: 235px;
-  height: 28px;
-  left: 780px;
-  top: 21%;
-  bottom: 69.92%;
+    position: absolute;
+    width: 235px;
+    height: 28px;
+    left: 780px;
+    top: 21%;
+    bottom: 69.92%;
 }
 
 .titulo{
@@ -161,7 +161,7 @@ body {
   width: 1122px;
   height: 600px;
   left: 370px;
-  top: 500px;
+  top: 450px;
 
     /* Auto layout */
 
@@ -172,107 +172,12 @@ body {
   
 }
 
-.data_nas{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 370px;
-  top: 540px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;  
-
-}
-
-
-.estado{
+.Sobrenome{
     position: absolute;
     width: 1122px;
     height: 469px;
     left: 370px;
-    top: 580px;
-  
-      /* Auto layout */
-  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;      
-
-}
-
-.cidade{
-
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 370px;
-  top: 620px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-
-}
-
-.genero{
-  position: absolute;
-  width: 1122px;
-  height: 600px;
-  left: 370px;
-  top: 660px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-}
-
-.raca{
-
-    position: absolute;
-    width: 1122px;
-    height: 469px;
-    left: 888px;
-    top: 500px;
-  
-      /* Auto layout */
-  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-
-
-}
-
-.telefone{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 540px;
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-
-}
-
-.cpf{
-
-    position: absolute;
-    width: 1122px;
-    height: 469px;
-    left: 888px;
-    top: 580px;
+    top: 490px;
   
       /* Auto layout */
   
@@ -282,34 +187,49 @@ body {
 
 }
 
+.email{
 
-.registro{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 620px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 370px;
+    top: 530px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
 }
 
-.diploma{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 660px;
+.senha{
 
-    /* Auto layout */
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 888px;
+    top: 450px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+}
+.confirm_senha{
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 888px;
+    top: 490px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
 }
 
