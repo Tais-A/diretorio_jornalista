@@ -4,9 +4,31 @@ from django.db.models import Q
 from django.core.paginator import Paginator
 from django.http import HttpResponse
 
+from ..models import Jornalista
 
 def home_view(request):
-    return render(request, template_name='index.html', status=200)
+    context = {}
+    jornalistas = Jornalista.objects.all()
+
+    if (request.GET.get('inicial') != None):            # Verifica se a pesquisa foi pelo glossario
+        filtro = []
+        for i in jornalistas:                           
+            if str(i)[0] == request.GET.get('inicial'): # Lista os Jornalistas com a inicial escolhida.
+                filtro.append(i)
+
+        context = {
+            'form': filtro                              # Envia para Form os jornalistas encontrados.
+        }
+
+    if request.GET.get('name') != None:                 # Verifica se a pesquisa foi pelo nome.
+        name = request.GET.get('name')
+        jornalistas = jornalistas.filter(nome_de_guerra__contains=name)     # Filta os jornalistas pelo nome.
+
+        context = {
+            'form': jornalistas                         # Envia para Form os jornalistas encontrados.
+        }
+
+    return render(request, template_name='index.html', context=context, status=200)
 
 
 def lista_jornalistas_view(request):
@@ -14,7 +36,7 @@ def lista_jornalistas_view(request):
     cidade = request.GET.get('cidade')
     estado = request.GET.get('estado')
 
-    jornalistas = Usuario.objects
+    jornalistas = Usuario.object
     if name is not None and name != '':
         jornalistas = jornalistas.filter(Q(user__first_name__contains=name) | Q(user__username__contains=name))
     else : 

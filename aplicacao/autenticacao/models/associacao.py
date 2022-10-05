@@ -9,7 +9,7 @@ class Associacao(models.Model):
     telefone = models.CharField(max_length=9)
     email = models.EmailField(max_length=254)
     presidente = models.CharField(max_length=254)
-    rede_sociais = models.ForeignKey(RedesSociais, on_delete=models.DO_NOTHING)
+    # rede_sociais = models.ForeignKey(RedesSociais, on_delete=models.DO_NOTHING)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
 
