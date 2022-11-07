@@ -15,7 +15,7 @@ class Jornalista(models.Model):
     data_de_nascimento = models.DateField()
     ddd_telefone = models.CharField( max_length=2)
     telefone = models.CharField( max_length=9)
-    rede_social = models.ForeignKey(RedesSociais,on_delete=models.CASCADE)
+    # rede_social = models.ForeignKey(RedesSociais,on_delete=models.CASCADE)
     etnia = models.ForeignKey(Etnia, on_delete=models.DO_NOTHING)
     estado = models.IntegerField(choices=OPCOES_ESTADO)
     cidade = models.IntegerField(choices=OPCOES_CIDADE)
@@ -23,14 +23,13 @@ class Jornalista(models.Model):
     estado_civil = models.ForeignKey(EstadoCivil, on_delete=models.DO_NOTHING)
     foto = models.ImageField(null=True, blank = True)
     registro = models.CharField( max_length=50)
-    diploma = models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)
+    # diploma = models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)
     aprovado = models.BooleanField(default=False)
-    revisor_responsavel = models.ForeignKey(Revisor,on_delete=models.DO_NOTHING)
-    obras_jornalisticas = models.ManyToManyField(ObraJornalistica)
-    historico_profissional = models.ManyToManyField(HistoricoProfissional)
-
+    # revisor_responsavel = models.ForeignKey(Revisor,on_delete=models.DO_NOTHING)
+    # obras_jornalisticas = models.ManyToManyField(ObraJornalistica)
+    # historico_profissional = models.ManyToManyField(HistoricoProfissional)
 
     def __str__(self):
         return '{}'.format(self.nome_de_guerra)

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  
+
 <header>
   {% include 'partials/menu.html' %}
 </header>
@@ -41,13 +41,16 @@
                 </div>
                 <div>
                   <div class="form-group row g-2 p-2 m-2">
-                    {% for f in form %}
-                      {{ f }}
-                      {% for erro in f.errors %}
-                        <div class="invalid-feedback" style="display: initial;">{{ error }}</div>
-                      {% endfor %}
-                    {% endfor %}     
-                    <a href = "#" class = "btn btn-primary btn-block">Entrar</a>
+                  
+                    {{ form.username }}
+                    {{ form.email }}
+                    {{ form.password }}
+
+                    {% for erro in f.errors %}
+                      <div class="invalid-feedback" style="display: initial;">{{ error }}</div>
+                    {% endfor %}
+                      
+                    <button type="submit" class = "btn btn-primary btn-block">Entrar</button>
                   </div>
                 </div>      
                 <div class="small">
