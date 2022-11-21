@@ -1,7 +1,7 @@
 from django.db import models
 
 from obras.models import ObraJornalistica
-from opcoes.models import OPCOES_CIDADE, OPCOES_ESTADO
+from opcoes.models import Estados, Cidades
 
 class Livro(models.Model):
     isbn10 = models.IntegerField(blank=True, null=True)
@@ -10,8 +10,8 @@ class Livro(models.Model):
     ano_publicacao = models.DateField()
     paginas = models.IntegerField()
     obra_jornalistica = models.ForeignKey(ObraJornalistica, on_delete=models.DO_NOTHING)
-    estado = models.IntegerField(choices=OPCOES_ESTADO)
-    cidade = models.IntegerField(choices=OPCOES_CIDADE)
+    estado = models.ForeignKey(Estados, on_delete=models.DO_NOTHING)
+    cidade = models.ForeignKey(Cidades, on_delete=models.DO_NOTHING)
 
     def __str__(self):
         return '{}'.format(self.obra_jornalistica)

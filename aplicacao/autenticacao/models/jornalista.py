@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 from autenticacao.models import Revisor, Associacao
-from opcoes.models import RedesSociais, OPCOES_CIDADE, OPCOES_ESTADO, Etnia, Genero, EstadoCivil
+from opcoes.models import RedesSociais, Cidades, Estados, Genero, EstadoCivil
 from obras.models import ObraJornalistica
 from historico.models import HistoricoProfissional
 
@@ -10,19 +10,18 @@ from historico.models import HistoricoProfissional
 class Jornalista(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
     associacao = models.ForeignKey(Associacao,on_delete=models.DO_NOTHING)
-    nome_de_guerra = models.CharField( max_length=50)
-    cpf = models.CharField( max_length=11)
-    data_de_nascimento = models.DateField()
-    ddd_telefone = models.CharField( max_length=2)
-    telefone = models.CharField( max_length=9)
+    nome_de_guerra = models.CharField(max_length=50)
+    cpf = models.CharField(max_length=11)
+    data_de_nascimento = models.DateField(null=True, blank = True)
+    ddd_telefone = models.CharField( max_length=2,null=True, blank = True)
+    telefone = models.CharField( max_length=9,null=True, blank = True)
     # rede_social = models.ForeignKey(RedesSociais,on_delete=models.CASCADE)
-    etnia = models.ForeignKey(Etnia, on_delete=models.DO_NOTHING)
-    estado = models.IntegerField(choices=OPCOES_ESTADO)
-    cidade = models.IntegerField(choices=OPCOES_CIDADE)
+    estado = models.ForeignKey(Estados, on_delete=models.DO_NOTHING,null=True, blank = True)
+    cidade = models.ForeignKey(Cidades, on_delete=models.DO_NOTHING,null=True, blank = True)
     genero = models.ForeignKey(Genero, on_delete=models.DO_NOTHING)
-    estado_civil = models.ForeignKey(EstadoCivil, on_delete=models.DO_NOTHING)
+    estado_civil = models.ForeignKey(EstadoCivil, on_delete=models.DO_NOTHING,null=True, blank = True)
     foto = models.ImageField(null=True, blank = True)
-    registro = models.CharField( max_length=50)
+    registro = models.CharField( max_length=50,null=True, blank = True)
     # diploma = models.ImageField( upload_to=None, height_field=None, width_field=None, max_length=None)
     criado_em = models.DateTimeField(auto_now_add=True)
     atualizado_em = models.DateTimeField(auto_now=True)

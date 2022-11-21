@@ -1,23 +1,21 @@
 from django.db import models
 import requests
 
-def Estados():
-  estados = requests.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-  estados = estados.json()
-  lista_estados = []
-  for estado in estados:
-    lista_estados.append((estado['id'],estado['nome'] +', '+ estado['sigla']))
-  return lista_estados
+class Estados(models.Model):
+    descricao = models.CharField(max_length=64)
+    sigla = models.CharField(max_length=2)
+
+    def __str__(self):
+        return '{}'.format(self.descricao)
 
 
-def Cidades():
-    # url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/' + uf + '/municipios'
-    url = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios'
-    cidades = requests.get(url).json()
-    lista_cidades = []
-    for cidade in cidades:
-      lista_cidades.append((cidade['id'], cidade['nome']+ ', ' + cidade['microrregiao']['mesorregiao']['UF']['sigla']))
-    return lista_cidades
+class Cidades(models.Model):
+    estado = models.ForeignKey(Estados, on_delete=models.CASCADE)
+    descricao = models.CharField(max_length=64)
+
+    def __str__(self):
+        return '{}'.format(self.descricao)
+
 
 class Pais(models.Model):
     descricao = models.CharField(max_length=64)
