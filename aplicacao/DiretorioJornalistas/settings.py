@@ -3,8 +3,8 @@ from environs import Env
 import dj_database_url
 import os
 
-env = Env()
-env.read_env()
+# env = Env()
+# env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,11 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
-DEBUG = env.bool("DEBUG", default=False)
+DEBUG = os.environ.get("DEBUG", default=False)
 
-ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(',')
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(',')
 
 
 # Application definition
@@ -76,7 +76,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DiretorioJornalistas.wsgi.application'
 
-DATABASES = {"default": dj_database_url.config(engine="django.db.backends.postgresql")}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_NAME'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
 
 
 # Password validation
