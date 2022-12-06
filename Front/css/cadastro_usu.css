@@ -1,47 +1,46 @@
 body {
-  width: 100%;
-  height: 100%;
-
+    width: 100%;
+    height: 100%;
+  
 }
-
+  
 .parte_decima { 
-  /*Menu principal */
-  width: 128%;
-  background-color: #f7f7f7;
-  height: 82px;
+    /*Menu principal */
+    width: 128%;
+    background-color: #f7f7f7;
+    height: 82px;
 }
+  
 
-
-
+  
 .logo {
-  float: left;
-  padding: 16px;
-  width: 68%;
-  /*Coloca um pouco mais no meio*/
+    float: left;
+    padding: 16px;
+    width: 72%;
+    /*Coloca um pouco mais no meio*/
 }
 
 .Menu-de-cima ul li {
-  left: 888px;
-  width:35px;
-  height: 22px;
-  padding: 20px;
-  font: poppins;
-  display: inline-block;
-  list-style: none;
+    left: 888px;
+    width:35px;
+    height: 22px;
+    padding: 20px;
+    font: poppins;
+    display: inline-block;
+    list-style: none;
 }
 
 
 
 .Menu-de-cima ul li a {
-  text-decoration: none;
-  color: #000000;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
 }  
-
 
 
 .box {
@@ -134,12 +133,12 @@ body {
     
 }
 .image-pessoa{
-  position: absolute;
-  width: 235px;
-  height: 28px;
-  left: 780px;
-  top: 21%;
-  bottom: 69.92%;
+    position: absolute;
+    width: 235px;
+    height: 28px;
+    left: 780px;
+    top: 21%;
+    bottom: 69.92%;
 }
 
 .titulo{
@@ -162,7 +161,7 @@ body {
   width: 1122px;
   height: 600px;
   left: 370px;
-  top: 500px;
+  top: 450px;
 
     /* Auto layout */
 
@@ -173,107 +172,12 @@ body {
   
 }
 
-.data_nas{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 370px;
-  top: 540px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;  
-
-}
-
-
-.estado{
+.Sobrenome{
     position: absolute;
     width: 1122px;
     height: 469px;
     left: 370px;
-    top: 580px;
-  
-      /* Auto layout */
-  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;      
-
-}
-
-.cidade{
-
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 370px;
-  top: 620px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-
-}
-
-.genero{
-  position: absolute;
-  width: 1122px;
-  height: 600px;
-  left: 370px;
-  top: 660px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  
-}
-
-.raca{
-
-    position: absolute;
-    width: 1122px;
-    height: 469px;
-    left: 888px;
-    top: 500px;
-  
-      /* Auto layout */
-  
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-
-
-}
-
-.telefone{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 540px;
-
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-
-}
-
-.cpf{
-
-    position: absolute;
-    width: 1122px;
-    height: 469px;
-    left: 888px;
-    top: 580px;
+    top: 490px;
   
       /* Auto layout */
   
@@ -283,34 +187,49 @@ body {
 
 }
 
+.email{
 
-.registro{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 620px;
-
-    /* Auto layout */
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 370px;
+    top: 530px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
 }
 
-.diploma{
-  position: absolute;
-  width: 1122px;
-  height: 469px;
-  left: 888px;
-  top: 660px;
+.senha{
 
-    /* Auto layout */
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 888px;
+    top: 450px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
+}
+.confirm_senha{
+    position: absolute;
+    width: 1122px;
+    height: 469px;
+    left: 888px;
+    top: 490px;
+  
+      /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
 
 }
 
