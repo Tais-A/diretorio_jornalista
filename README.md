@@ -60,7 +60,6 @@
 
 ## Project status
 =======
-# Diretório Piloto de Jornalistas no Brasil.
 
 ## Sprint 1
 
