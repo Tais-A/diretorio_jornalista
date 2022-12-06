@@ -1,0 +1,1 @@
+from .historicoViews import cadastro_historico, edita_historico, lista_historico

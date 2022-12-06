@@ -1,0 +1,27 @@
+services:
+  db: 
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgres/data
+    environment:
+      - POSTGRES_DB=${POSTRGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      
+  web:
+    build: ./aplicacao
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./aplicacao:/code
+    ports:
+      - "80:8000"
+    environment:
+      - POSTGRES_DB=${POSTRGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - SECRET_KEY=${SECRET_KEY}
+      - DEBUG=${DEBUG}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+    depends_on:
+      - db
+
