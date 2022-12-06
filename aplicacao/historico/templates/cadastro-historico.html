@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header>{% include 'partials/menu.html' %}</header>
+
+<main>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="tela-cadastro">
+        <div class="box">
+          <div class="titulo">   
+            Incluir Experiência
+          </div>
+          <div class="dadoscoluna" style="column-count: 2">
+            {{ form.empresa }}
+            {{ form.veiculo }}
+            {{ form.dataInicio }}
+            {{ form.referencia }}
+            {{ form.cargo }}
+            {{ form.local }}
+            {{ form.dataFim }}
+          </div>
+          
+          <div class="butoes">
+            <button class="cancel">Cancelar</button>
+  
+            <button
+              class="prox"
+              type="submit"
+            >
+              Salvar
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</main>
+
+<footer>
+  {% include 'partials/footer.html' %}
+</footer>
+
+{% endblock content %}
