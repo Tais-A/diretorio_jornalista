@@ -1,15 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from autenticacao.forms.authForm import DadosForm
+from autenticacao.forms.jornalistaForm import JornalistaForm
 from opcoes.forms.redesForm import RedesForm
 
 def cadastro_jornalista_view(request, id):
-  dadosForm = DadosForm()
+  jornalistaForm = JornalistaForm()
   redesForm = RedesForm()
 
   context = {
-    'form': dadosForm,
+    'form': jornalistaForm,
     'redes': redesForm,
     'id': id,
   }
