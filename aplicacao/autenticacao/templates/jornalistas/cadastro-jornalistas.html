@@ -9,7 +9,7 @@
     <div>{{request.GET.mensagem}}</div>
     {% endif%}
 
-    <form method="POST">
+    <form method="POST" action={% url 'salvar' %}>
       {% csrf_token %}
       <div class="tela-cadastro" id="Primeiro">
         <div class="subtitulo">
@@ -41,14 +41,14 @@
           </div>
           <div class="dadoscoluna">
 
-            {{ form.associacao }}
             {{ form.nome_de_guerra }}
+            {{ form.associacao }}
             {{ form.cpf }}
             {{ form.data_de_nascimento }}
             {{ form.telefone }}
-            {{ form.nacionalidade }}
-            {{ form.cidade }}
-            {{ form.telefone }}
+            {{ form.genero }}
+            {{ form.estado_civil }}
+
           </div>
 
           <div class="separador"> </div>

@@ -23,7 +23,11 @@ class JornalistaForm(ModelForm):
             'cpf': forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'CPF','required':'True'}),
             'telefone': forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Telefone'}),
             'data_de_nascimento': forms.DateInput(attrs={'class': 'form-control2', 'placeholder':'Data de nascimento'}),
+            'genero': forms.Select(attrs={'class': 'form-control2'}),
+            'estado_civil': forms.Select(attrs={'class': 'form-control2'}),
 
+
+            
             # 'nacionalidade' :forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Nacionalidade'})),
             # 'data_de_nascimento': forms.CharField(widget=forms.DateInput(attrs={'class': 'form-control2', 'placeholder':'Data de nascimento'}), required=True),
             # localNascimento = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Local de nascimento'}), required=True)

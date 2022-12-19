@@ -168,3 +168,6 @@ tmp/
 .settings
 local.properties
 .loadpath
+
+
+data/
