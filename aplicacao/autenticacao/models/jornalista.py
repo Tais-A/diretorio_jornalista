@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+    
 
 from autenticacao.models import Revisor, Associacao
 from opcoes.models import RedesSociais, Cidades, Estados, Genero, EstadoCivil
@@ -13,8 +16,7 @@ class Jornalista(models.Model):
     nome_de_guerra = models.CharField(max_length=50)
     cpf = models.CharField(max_length=11)
     data_de_nascimento = models.DateField(null=True, blank = True)
-    ddd_telefone = models.CharField( max_length=2,null=True, blank = True)
-    telefone = models.CharField( max_length=9,null=True, blank = True)
+    telefone = models.CharField( max_length=11,null=True, blank = True)
     # rede_social = models.ForeignKey(RedesSociais,on_delete=models.CASCADE)
     estado = models.ForeignKey(Estados, on_delete=models.DO_NOTHING,null=True, blank = True)
     cidade = models.ForeignKey(Cidades, on_delete=models.DO_NOTHING,null=True, blank = True)
@@ -32,3 +34,22 @@ class Jornalista(models.Model):
 
     def __str__(self):
         return '{}'.format(self.nome_de_guerra)
+
+    @receiver(post_save, sender=User)
+    def create_jornalista(sender, instance, created, **kwargs):
+        try:
+            if created:
+                Jornalista.objects.create(user=instance)
+        except:
+            pass
+
+    @receiver(post_save, sender=User)
+    def save_jornalista(sender, instance, **kwargs):
+        try:
+            instance.jornalista.save()
+        except:
+            pass
+
+        
+    
+    

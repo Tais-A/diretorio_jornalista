@@ -10,4 +10,4 @@ class Revisor(models.Model):
     atualizado_em = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return '{} - {}'.format(self.User.name, self.associacao)
+        return '{} - {}'.format(self.usuario, self.associacao)

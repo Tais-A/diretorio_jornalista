@@ -32,3 +32,4 @@ services:
       - "80:80"
 
    
+POSTGRES_DB

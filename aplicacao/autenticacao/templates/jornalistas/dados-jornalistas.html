@@ -4,16 +4,11 @@
 
 <main>
   <body>
-
-    {% if request.GET.mensagem %}
-    <div>{{request.GET.mensagem}}</div>
-    {% endif%}
-
-    <form method="POST">
+    <form action={% url 'salvar' %} method="POST">
       {% csrf_token %}
       <div class="tela-cadastro" id="Primeiro">
         <div class="subtitulo">
-          <h3>Crie uma nova conta</h3>
+          <h3>{{ jornalista.nome_de_guerra }}</h3>
         </div>
         
         <div class="foto-perfil">
@@ -41,19 +36,21 @@
           </div>
           <div class="dadoscoluna">
 
-            {{ form.associacao }}
-            {{ form.nome_de_guerra }}
-            {{ form.cpf }}
-            {{ form.data_de_nascimento }}
-            {{ form.telefone }}
-            {{ form.nacionalidade }}
-            {{ form.cidade }}
-            {{ form.telefone }}
+            {{ jornalista.user.get_full_name }}
+            {{ jornalista.data_de_nascimento }}
+            {{ jornalista.cpf }}
+            ( {{ jornalista.ddd_telefone }}) - {{jornalista.telefone}}
+            {{ jornalista.estado }}
+            {{ jornalista.cidade }} 
+            {{ jornalista.genero }} 
+            {{ jornalista.estado_civil }} 
+            {{ jornalista.registro }} 
+
           </div>
 
-          <div class="separador"> </div>
+          {% comment %} <div class="separador"> </div> {% endcomment %}
 
-          <div class="titulo">
+          {% comment %} <div class="titulo">
             <div class="circ-l"> </div>   
             Formação
           </div>
@@ -110,7 +107,7 @@
                 Incluir Publicação
               </div>
             </div>
-          </div>
+          </div> {% endcomment %}
           
           <div class="butoes">
             <button class="cancel">Cancelar</button>
