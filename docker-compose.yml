@@ -4,7 +4,7 @@ services:
   db: 
     image: postgres
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - jornalista-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
@@ -28,4 +28,8 @@ services:
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
     depends_on:
       - db
+
+volumes:
+  jornalista-data:
+
 
