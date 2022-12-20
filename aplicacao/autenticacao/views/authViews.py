@@ -66,7 +66,8 @@ def register_view(request):
                 user = User.objects.create_user(username, email, password)
                 if user is not None:
                     message = {'type': 'success', 'text': 'Conta criada com sucesso!' }
-                    return redirect('/jornalista/'+ str(user.id) +'/cadastro')              # Redireciona para a tela de cadastro de usuário.
+                    return redirect('/jornalista/'+ str(user.id) +'/cadastro')              # Redireciona para a tela de cadastro de usuário.        
+
                 else:
                     message = {'type':'danger', 'text': 'Um erro ocorreu ao tentar criar o usuário.'}
 
