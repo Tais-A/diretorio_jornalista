@@ -9,7 +9,7 @@
     <div>{{request.GET.mensagem}}</div>
     {% endif%}
 
-    <form method="POST" action={% url 'salvar' %}>
+    <form method="POST" action="">
       {% csrf_token %}
       <div class="tela-cadastro" id="Primeiro">
         <div class="subtitulo">
@@ -51,7 +51,7 @@
 
           </div>
 
-          <div class="separador"> </div>
+          {% comment %} <div class="separador"> </div>
 
           <div class="titulo">
             <div class="circ-l"> </div>   
@@ -110,7 +110,7 @@
                 Incluir Publicação
               </div>
             </div>
-          </div>
+          </div> {% endcomment %}
           
           <div class="butoes">
             <button class="cancel">Cancelar</button>
