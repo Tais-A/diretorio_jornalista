@@ -11,13 +11,19 @@ class JornalistaForm(ModelForm):
 
     class Meta:
         model = Jornalista
-        fields = '__all__'
+        fields = [
+            'usuario',
+            'associacao',
+            'nome_de_guerra',
+            'cpf',
+            'telefone',
+            'data_de_nascimento',
+            'genero',
+            'estado_civil',
+        ]
 
         widgets = {
             'usuario': forms.HiddenInput(),
-            'criado_em': forms.HiddenInput(),
-            'atualizado_em': forms.HiddenInput(),
-            'aprovado': forms.HiddenInput(),
             'associacao': forms.Select(attrs={'class': 'form-control2'}),
             'nome_de_guerra' : forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Nome de Gerra'}),
             'cpf': forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'CPF','required':'True'}),

@@ -6,87 +6,45 @@ from django.db.models import Q
 
 from autenticacao.forms.jornalistaForm import JornalistaForm
 from opcoes.forms.redesForm import RedesForm
-from autenticacao.models import Jornalista
+from autenticacao.models import Jornalista, Associacao
+from opcoes.models import Genero, EstadoCivil
+
 
 @login_required
-def add_jornalista(request):
-  return render(request, 'add_jornalista.html', {'logged_profile':get_logged_user(request)})
-
-
-class AddJornalistaView(View):
-  template_name = 'add_jornalista.html'
-  def get(self, request, *args, **kwargs):
-    return HttpResponse(request.user.id)
-
-  def post(self, request, *args, **kwargs):
-    jornalistaForm = JornalistaForm(request.POST)
-
-    if jornalistaForm.is_valid():
-      dados_form = form.data
-
-      jornalista = Jornalista (
-            usuario =request.user,
-            associacao=dados_form['associacao'],
-            nome_de_guerra=dados_form['nome_de_guerra'],
-            cpf=dados_form['cpf'],
-            telefone=dados_form['telefone'],
-            data_de_nascimento=dados_form['data_de_nascimento'],
-            genero=dados_form['genero'],
-            estado_civil=dados_form['estado_civil'],
-      )
-
-      jornalista.save()
-
-      return redirect('/')
-
-    return render(request, self.template_name, {'form': jornalistaForm})
-
-
-
 def cadastro_jornalista_view(request):
-    
+
+    initial = {'usuario':request.user}
     message = None
 
     if request.method == 'POST':
-        jornalista = Jornalista()
-        jornalistaForm = JornalistaForm(request.POST, instance=jornalista)
-        # userForm = UserForm(instance=request.user)
+        jornalistaForm = JornalistaForm(request.POST, initial=initial)
+        try:
+          dados_form = jornalistaForm.data
+
+          jornalista = Jornalista()
+
+          jornalista.usuario=request.user
+          jornalista.associacao_id=dados_form['associacao']
+          jornalista.nome_de_guerra=dados_form['nome_de_guerra']
+          jornalista.cpf=dados_form['cpf']
+          jornalista.telefone=dados_form['telefone']
+          jornalista.data_de_nascimento=dados_form['data_de_nascimento']
+          jornalista.genero_id=dados_form['genero']
+          jornalista.estado_civil_id=dados_form['estado_civil']
+
+          jornalista.save()
+
+          message = {'type': 'sucess', 'text': 'Dados atualizados com sucesso'}
+          redirect('/')
+        except Exception as e:
+          message = { 'type': 'danger', 'text': 'Erro ao salvar jornalista. Descrição: %s' %e }
 
     else:
-        jornalista = Jornalista.objects.filter(usuario=request.user).first()
-        jornalistaForm = JornalistaForm(instance=jornalista)
-        # userForm = UserForm(instance=request.user)
-
-    # if jornalistaForm.is_valid() and userForm.is_valid() and emailUnused:
-
-    if jornalistaForm.is_valid():
-        dados_form = form.data
-
-        jornalista = Jornalista (
-                usuario=request.user,
-                associacao=dados_form['associacao'],
-                nome_de_guerra=dados_form['nome_de_guerra'],
-                cpf=dados_form['cpf'],
-                telefone=dados_form['telefone'],
-                data_de_nascimento=dados_form['data_de_nascimento'],
-                genero=dados_form['genero'],
-                estado_civil=dados_form['estado_civil'],
-          )
-
-        jornalista.save()
-        print(jornalista.pk)
- 
-        # userForm.save()
-
-        message = {'type': 'sucess', 'text': 'Dados atualizados com sucesso'}
-        redirect('/')
-    else:
-        message = { 'type': 'danger', 'text': 'Dados inválidos'}
+        jornalistaForm = JornalistaForm(initial=initial)
 
 
     context = {
         'form': jornalistaForm,
-        # 'userForm': userForm,
         'message': message
     }
 
@@ -114,12 +72,12 @@ def edita_jornalista_view(request):
 
   if jornalistaForm.is_valid():
 
-    message = { 'type': 'sucess', 'texte': 'Dados atualizados com sucesso'}
+    message = { 'type': 'sucess', 'text': 'Dados atualizados com sucesso'}
     
     return redirect('/')
 
   else:
-    message = { 'type': 'danger', 'texte': 'Dados inválidos'}
+    message = { 'type': 'danger', 'text': 'Dados inválidos'}
 
   context = {
     'form': jornalistaForm,

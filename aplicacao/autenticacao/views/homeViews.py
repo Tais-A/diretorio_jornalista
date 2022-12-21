@@ -13,7 +13,7 @@ def home_view(request):
     if (request.GET.get('inicial') != None):            # Verifica se a pesquisa foi pelo glossario
         filtro = []
         for i in jornalistas:                           
-            if str(i)[0] == request.GET.get('inicial'): # Lista os Jornalistas com a inicial escolhida.
+            if (str(i)).upper()[0] == request.GET.get('inicial'): # Lista os Jornalistas com a inicial escolhida.
                 filtro.append(i)
 
         context = {
@@ -33,17 +33,17 @@ def home_view(request):
 
 def lista_jornalistas_view(request):
     name = request.GET.get('name')
-    cidade = request.GET.get('cidade')
-    estado = request.GET.get('estado')
+    # cidade = request.GET.get('cidade')
+    # estado = request.GET.get('estado')
 
     jornalistas = Usuario.object
     if name is not None and name != '':
         jornalistas = jornalistas.filter(Q(user__first_name__contains=name) | Q(user__username__contains=name))
-    else : 
-        if cidade is not None:
-            jornalistas = jornalistas.filter(cidade__id=cidade)
-        elif estado is not None:
-            jornalistas = jornalistas.filter(cidade__estado=estado)
+    # else : 
+    #     if cidade is not None:
+    #         jornalistas = jornalistas.filter(cidade__id=cidade)
+    #     elif estado is not None:
+    #         jornalistas = jornalistas.filter(cidade__estado=estado)
     if len(jornalistas) > 0:
         paginator = Paginator(jornalistas, 8)
         page = request.GET.get('page')

@@ -3,14 +3,17 @@
 <header>{% include 'partials/menu.html' %}</header>
 
 <main>
+
+  <div>
+    {% if message is not None %}
+    <div class="alert alert-{{ message.type }}">{{ message.text }}</div>
+  {% endif %}
+  </div>
+
   <body>
 
-    {% if request.GET.mensagem %}
-    <div>{{request.GET.mensagem}}</div>
-    {% endif%}
 
-    <form method="POST" action="">
-      {% csrf_token %}
+
       <div class="tela-cadastro" id="Primeiro">
         <div class="subtitulo">
           <h3>Crie uma nova conta</h3>
@@ -33,6 +36,8 @@
           />
         </div>
 
+        <form method="POST" action="">
+          {% csrf_token %}
 
         <div class="box">
           <div class="titulo">
@@ -47,7 +52,7 @@
             {{ form.data_de_nascimento }}
             {{ form.telefone }}
             {{ form.genero }}
-            {{ form.estado_civil }}
+            {{ form.estado_civil }} 
 
           </div>
 
