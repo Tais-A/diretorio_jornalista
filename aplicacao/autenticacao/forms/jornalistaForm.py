@@ -31,18 +31,5 @@ class JornalistaForm(ModelForm):
             'data_de_nascimento': forms.DateInput(attrs={'class': 'form-control2', 'placeholder':'Data de nascimento'}),
             'genero': forms.Select(attrs={'class': 'form-control2'}),
             'estado_civil': forms.Select(attrs={'class': 'form-control2'}),
-
-
-            
-            # 'nacionalidade' :forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Nacionalidade'})),
-            # 'data_de_nascimento': forms.CharField(widget=forms.DateInput(attrs={'class': 'form-control2', 'placeholder':'Data de nascimento'}), required=True),
-            # localNascimento = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Local de nascimento'}), required=True)
-            # nome = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Nome Completo'}), required=True)
-            # cidade = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Cidade/Estado Residencial'}), required=True)
-            # registro = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Registro'}), required=False)
-            # diploma = forms.FileField(widget=forms.FileInput(attrs={'class': 'form-control2', 'placeholder':'Diploma'}), required=False)
-            # area = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control2', 'placeholder':'Área/Especialidade'}), required=False)
-            # dataFormacao = forms.CharField(widget=forms.DateInput(attrs={'class': 'form-control2', 'placeholder':'Data de Formatura'}),required=True)
-
         }
 

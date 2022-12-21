@@ -17,7 +17,6 @@ class Jornalista(models.Model):
     cpf = models.CharField(max_length=11)
     data_de_nascimento = models.DateField(null=True, blank = True)
     telefone = models.CharField( max_length=11,null=True, blank = True)
-    # rede_social = models.ForeignKey(RedesSociais,on_delete=models.CASCADE)
     estado = models.ForeignKey(Estados, on_delete=models.DO_NOTHING,null=True, blank = True)
     cidade = models.ForeignKey(Cidades, on_delete=models.DO_NOTHING,null=True, blank = True)
     genero = models.ForeignKey(Genero, on_delete=models.DO_NOTHING, null=True, blank = True)
@@ -34,21 +33,6 @@ class Jornalista(models.Model):
 
     def __str__(self):
         return '{}'.format(self.nome_de_guerra)
-
-    # @receiver(post_save, sender=User)
-    # def create_jornalista(sender, instance, created, **kwargs):
-    #     try:
-    #         if created:
-    #             Jornalista.objects.create(user=instance)
-    #     except:
-    #         pass
-
-    # @receiver(post_save, sender=User)
-    # def save_jornalista(sender, instance, **kwargs):
-    #     try:
-    #         instance.jornalista.save()
-    #     except:
-    #         pass
 
         
     

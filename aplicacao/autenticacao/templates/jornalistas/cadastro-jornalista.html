@@ -55,8 +55,8 @@
             {{ form.estado_civil }} 
 
           </div>
-
-          {% comment %} <div class="separador"> </div>
+          {% comment %} 
+          <div class="separador"> </div>
 
           <div class="titulo">
             <div class="circ-l"> </div>   
@@ -69,12 +69,15 @@
             <label for="id_diploma" class="input-type">Enviar Diploma</label>
             <input type="file" class="form-control2" name="diploma" placeholder="Diploma" id="id_diploma">
 
-          </div>
+          </div>    {% endcomment %} 
           
           <div class="separador"> </div>   
 
           <div class="titulo">
-            <div class="circ-l"> </div>   
+            <div class="circ-l"> 
+            
+          </div> 
+          
             Dados Profissionais
           </div>
           <h2 class="subtitulo">Redes Sociais</h2>
@@ -87,6 +90,9 @@
             {{ redes.twitter }}
             {{ redes.site }}
           </div>
+
+          
+          {% comment %} 
 
           <h2 class="subtitulo">Histórico Profissional</h2>
 

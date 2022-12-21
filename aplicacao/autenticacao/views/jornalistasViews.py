@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect, get_list_or_404
 from django.contrib.auth.decorators import login_required
-from django.views import View
 from django.db.models import Q
 
 from autenticacao.forms.jornalistaForm import JornalistaForm
@@ -15,6 +14,7 @@ def cadastro_jornalista_view(request):
 
     initial = {'usuario':request.user}
     message = None
+    redes = RedesForm()
 
     if request.method == 'POST':
         jornalistaForm = JornalistaForm(request.POST, initial=initial)
@@ -32,6 +32,8 @@ def cadastro_jornalista_view(request):
           jornalista.genero_id=dados_form['genero']
           jornalista.estado_civil_id=dados_form['estado_civil']
 
+             
+
           jornalista.save()
 
           message = {'type': 'sucess', 'text': 'Dados atualizados com sucesso'}
@@ -45,6 +47,7 @@ def cadastro_jornalista_view(request):
 
     context = {
         'form': jornalistaForm,
+        'redes': redes,
         'message': message
     }
 
