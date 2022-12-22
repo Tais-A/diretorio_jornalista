@@ -6,7 +6,7 @@ from django.db.models import Q
 from autenticacao.forms.jornalistaForm import JornalistaForm
 from opcoes.forms.redesForm import RedesForm
 from autenticacao.models import Jornalista, Associacao
-from opcoes.models import Genero, EstadoCivil, RedesSociais
+from opcoes.models import Genero, EstadoCivil, RedesSociais, TipoDeRedeSocial
 
 
 @login_required
@@ -14,15 +14,11 @@ def cadastro_jornalista_view(request):
 
     initial = {'usuario':request.user}
     message = None
-    redes = RedesForm()
 
     if request.method == 'POST':
         jornalistaForm = JornalistaForm(request.POST, initial=initial)
-        try:
-
-        
+        try: 
           dados_form = jornalistaForm.data
-
 
           jornalista = Jornalista()
 
@@ -56,7 +52,74 @@ def cadastro_jornalista_view(request):
 
 @login_required
 def dados_jornalista_view(request):
-  context = {}
+  jornalista = get_object_or_404(Jornalista, usuario=request.user)
+  redesForm = RedesForm()
+  print(jornalista)
+  if request.method == 'POST':
+    redesForm = RedesForm(request.POST)
+    dados_form = redesForm.data
+    
+    if dados_form['telegram']:
+      telegram = RedesSociais(
+        tipo_de_rede_social=TipoDeRedeSocial.objects.get(id=1),
+        link = dados_form['telegram']
+      )
+      telegram.save()
+    try: 
+      telegram = RedesSociais( )
+      telegram.jornalista = jornalista
+
+      telegram.link = dados_form['telegram']
+      telegram.save()
+      print(telegram.link)
+          # if redes_form['facebook'] != "":
+          #   facebook = RedesSociais( )
+          #   facebook.jornalista = jornalista
+          #   facebook.tipo_de_rede_social = 2
+          #   facebook.link = redes_form['facebook']
+          #   facebook.save()
+
+          # if redes_form['podcast'] != "":
+          #   podcast = RedesSociais( )
+          #   podcast.jornalista = jornalista
+          #   podcast.tipo_de_rede_social = 3
+          #   podcast.link = redes_form['podcast']
+          #   podcast.save()
+
+          # if redes_form['linkedin'] != "":
+          #   linkedin = RedesSociais( )
+          #   linkedin.jornalista = jornalista
+          #   linkedin.tipo_de_rede_social = 4
+          #   linkedin.link = redes_form['linkedin']
+          #   linkedin.save()
+
+          # if redes_form['twitter'] != "":
+          #   twitter = RedesSociais( )
+          #   twitter.jornalista = jornalista
+          #   twitter.tipo_de_rede_social = 5
+          #   twitter.link = redes_form['twitter']
+          #   twitter.save()
+
+          # if redes_form['site'] != "":
+          #   site = RedesSociais( )
+          #   site.jornalista = jornalista
+          #   site.tipo_de_rede_social = 6
+          #   site.link = redes_form['site']
+          #   site.save()
+
+      message = {'type': 'sucess', 'text': 'Dados atualizados com sucesso'}
+      return redirect('/') 
+
+    except Exception as e:
+      message = { 'type': 'danger', 'text': 'Erro ao salvar jornalista. Descrição: %s' %e }
+
+  else:
+    redesForm = redesForm()
+
+
+  context = {
+    'redes': redesForm
+  }
   return render(request, template_name='jornalista/dados-jornalista.html', context=context, status=200)
 
 @login_required

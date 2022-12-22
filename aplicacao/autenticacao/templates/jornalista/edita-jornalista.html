@@ -3,6 +3,12 @@
 <header>{% include 'partials/menu.html' %}</header>
 
 <main>
+  <div>
+    {% if message is not None %}
+    <div class="alert alert-{{ message.type }}">{{ message.text }}</div>
+  {% endif %}
+  </div>
+  
   <body>
     <form method="POST">
       {% csrf_token %}
