@@ -9,9 +9,8 @@ urlpatterns = [
 
     path('jornalista', dados_jornalista_view, name="dados-jornalista"),
     path('jornalista/cadastro', cadastro_jornalista_view, name="cadastro-jornalista"),
-    # path('jornalista/salvar', salvar, name="salvar"),
-
-    #re_path(r'^adicionajornalista/$', AddJornalistaView.as_view(), name="add_jornalista"),
+    path('jornalista/dados-jornalista',dados_jornalista_view, name="dados-jornalista"),
+    path('jornalista/edita-jornalista',edita_jornalista_view, name="edita-jornalista"),
 
 
     path('revisor/<int:id>', lista_jornalistas_associados_view, name="jornalista-associados"),

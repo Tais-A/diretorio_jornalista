@@ -3,12 +3,11 @@ from django.http import HttpResponse
 
 from historico.forms.expForm import ExperienceForm
 
-def cadastro_historico(request, id):
+def cadastro_historico(request):
   experienceForm = ExperienceForm()
 
   context = {
     'form': experienceForm,
-    'id': id
   }
 
   return render(request, template_name="cadastro-historico.html", context=context, status=200)

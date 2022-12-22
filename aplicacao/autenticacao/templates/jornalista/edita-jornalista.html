@@ -4,7 +4,7 @@
 
 <main>
   <body>
-    <form action={% url 'salvar' %} method="POST">
+    <form method="POST">
       {% csrf_token %}
       <div class="tela-cadastro" id="Primeiro">
         <div class="subtitulo">
@@ -46,11 +46,11 @@
             {{ jornalista.estado_civil }} 
             {{ jornalista.registro }} 
 
-          </div>
+          </div> 
 
-          {% comment %} <div class="separador"> </div> {% endcomment %}
+          <div class="separador"> </div> 
 
-          {% comment %} <div class="titulo">
+          <div class="titulo">
             <div class="circ-l"> </div>   
             Formação
           </div>
@@ -84,7 +84,7 @@
 
           <div class="butaoadd">
             <div class="incluir">
-              <a class="incluir" href="{% url 'cadastro_historico' id %}" target="_blank"> Incluir Experiência </a>
+              <a class="incluir" href="{% url 'cadastro_historico' %}" target="_blank"> Incluir Experiência </a>
             </div>
           </div>
           
@@ -107,7 +107,7 @@
                 Incluir Publicação
               </div>
             </div>
-          </div> {% endcomment %}
+          </div> 
           
           <div class="butoes">
             <button class="cancel">Cancelar</button>
